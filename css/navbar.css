@@ -1,0 +1,82 @@
+.site-header {
+  width: 100%;
+  background-color: var(--blanco, #ffffff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.site-header,
+.site-header * {
+  box-sizing: border-box;
+}
+
+.navBar {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 60px;
+  background-color: var(--blanco, #ffffff);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navBar .logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.navBar ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navBar a {
+  color: var(--verdeOscuro, #306e68);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navBar a:hover {
+  color: var(--verdeClaro, #50b4aa);
+}
+
+.navSession {
+  white-space: nowrap;
+}
+
+.page-with-navbar {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page .login,
+.support-page .contacto {
+  margin: 60px auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .navBar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .navBar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 25px;
+  }
+}

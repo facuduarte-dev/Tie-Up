@@ -1,272 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevConnect</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body class="page-with-navbar">
+    <header class="site-header">
+      <nav class="navBar">
+        <div class="logo">
+          <img
+            src="../docs/tie-up/logo-tie-up-transparente.png"
+            alt="Logo de DevConnect"
+          />
+        </div>
 
-    <header>
-        <nav class="navBar">
+        <div class="navLinks">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#freelancers">Freelancers</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+          </ul>
+        </div>
 
-            <div class="logo">
-                <img src="../src/img/logo.png" alt="Logo de DevConnect">
-            </div>
-
-            <div>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#freelancers">Freelancers</a></li>
-                    <li><a href="#resenas">Reseñas</a></li>
-                    <li><a href="soporte.html">Soporte</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <a href="#">Explorar Servicios</a>
-                <a href="../html/login.html" class="btnRegistro">Registrarse</a>
-            </div>
-
-        </nav>
+        <div class="navSession">
+          <a href="login.html">Registrarse / Iniciar Sesión</a>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="heroTxt">
+          <h1>
+            Encuentra al profesional perfecto para cualquier proyecto digital.
+          </h1>
 
-        <!-- HERO -->
-        <section class="hero">
+          <p>
+            Diseñadores, programadores, editores, marketers y creadores de
+            contenido en un solo lugar.
+          </p>
 
-            <div class="heroTxt">
+          <div class="divHero">
+            <label for="buscarServicio" class="sr-only">Buscar servicio</label>
 
-                <h1>Encuentra al profesional perfecto para cualquier proyecto digital.</h1>
+            <input
+              id="buscarServicio"
+              type="text"
+              placeholder="¿Qué servicio estás buscando?"
+            />
 
-                <p>
-                    Diseñadores, programadores, editores, marketers y creadores de contenido en un solo lugar.
-                </p>
-
-                <div class="divHero">
-
-                    <label for="buscarServicio" class="sr-only">Buscar servicio</label>
-
-                    <input
-                        id="buscarServicio"
-                        type="text"
-                        placeholder="¿Qué servicio estás buscando?"
-                    >
-
-                    <div>
-                        <a href="#" id="aHero1">Explorar Servicios</a>
-                        <a href="#" id="aHero2">Publicar Servicios</a>
-                    </div>
-
-                </div>
-
+            <div>
+              <a href="#servicios" id="aHero1">Explorar Servicios</a>
+              <a href="login.html" id="aHero2">Publicar Servicios</a>
             </div>
+          </div>
+        </div>
 
-            <div class="heroImage">
-                <img class="heroImg" src="../src/img/imgHero.png" alt="Profesionales trabajando">
-            </div>
+        <div class="heroImage">
+          <img
+            class="heroImg"
+            src="../src/img/imgHero.png"
+            alt="Profesionales trabajando"
+          />
+        </div>
+      </section>
 
-        </section>
-        
-        <!-- CATEGORÍAS -->
-        <section class="catPopulares" id="servicios">
+      <!-- CATEGORÍAS -->
+      <section class="catPopulares" id="servicios">
+        <h2 id="titleCatPopulares">Categorías Populares</h2>
 
-            <h2 id="titleCatPopulares">Categorías Populares</h2>
+        <div class="cardContainer">
+          <div class="card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h2>Marketing</h2>
+            <p>SEO, Ads y Social Media</p>
+          </div>
 
-            <div class="cardContainer">
+          <div class="card">
+            <i class="fa-solid fa-code"></i>
+            <h2>Desarrollo Web</h2>
+            <p>Frontend, Backend y Full Stack</p>
+          </div>
 
-                <div class="card">
-                     <i class="fa-solid fa-bullhorn"></i>
-                    <h2>Marketing</h2>
-                    <p>SEO, Ads y Social Media</p>
-                </div>
+          <div class="card">
+            <i class="fa-solid fa-palette"></i>
+            <h2>Diseño</h2>
+            <p>Logos, Branding y UI/UX.</p>
+          </div>
 
-                <div class="card">
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Desarrollo Web</h2>
-                    <p>Frontend, Backend y Full Stack</p>
-                </div>
+          <div class="card">
+            <i class="fa-solid fa-video"></i>
+            <h2>Edición</h2>
+            <p>Videos de YouTube y Redes</p>
+          </div>
 
-                <div class="card">
-                    <i class="fa-solid fa-palette"></i>
-                    <h2>Diseño</h2>
-                    <p>Logos, Branding y UI/UX.</p>
-                </div>
+          <div class="card">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h2>Redacción</h2>
+            <p>Copywriting y Blogs</p>
+          </div>
 
-                <div class="card">
-                   <i class="fa-solid fa-video"></i>
-                    <h2>Edición</h2>
-                    <p>Videos de YouTube y Redes</p>
-                </div>
+          <div class="card">
+            <i class="fa-solid fa-robot"></i>
+            <h2>IA</h2>
+            <p>Automatizaciones y Chatbots</p>
+          </div>
+        </div>
+      </section>
 
-                <div class="card">
-                   <i class="fa-solid fa-pen-nib"></i>
-                    <h2>Redacción</h2>
-                    <p>Copywriting y Blogs</p>
-                </div>
+      <!-- DESTACADOS -->
+      <section class="destacados" id="freelancers">
+        <h2 id="titleDestacados">Freelancers Destacados</h2>
 
-                <div class="card">
-                      <i class="fa-solid fa-robot"></i>
-                    <h2>IA</h2>
-                    <p>Automatizaciones y Chatbots</p>
-                </div>
+        <div class="cardDestacadosContainer">
+          <div class="cardDestacado">
+            <img
+              src="https://images.pexels.com/photos/1604024/pexels-photo-1604024.jpeg"
+              alt="Foto de perfil"
+            />
+            <h2>Ana García</h2>
+            <p>Diseñadora web</p>
+            <p>⭐⭐⭐⭐⭐ 4.9</p>
+            <!--<button>Ver Perfil</button>-->
+            <a href="perfil-ana.html">Ver Perfil</a>
+          </div>
 
-            </div>
+          <div class="cardDestacado">
+            <img
+              src="https://images.pexels.com/photos/16323580/pexels-photo-16323580.jpeg"
+              alt="Foto de perfil"
+            />
+            <h2>Pedro Sanchez</h2>
+            <p>Full Stack Developer</p>
+            <p>⭐⭐⭐⭐⭐ 4.9</p>
+            <button>Ver Perfil</button>
+          </div>
 
-        </section>
+          <div class="cardDestacado">
+            <img
+              src="https://images.pexels.com/photos/9034719/pexels-photo-9034719.jpeg"
+              alt="Foto de perfil"
+            />
+            <h2>Alonso Mazza</h2>
+            <p>Marketing CN</p>
+            <p>⭐⭐⭐⭐⭐ 4.9</p>
+            <button>Ver Perfil</button>
+          </div>
+        </div>
+      </section>
 
-        <!-- DESTACADOS -->
-        <section class="destacados" id="freelancers">
+      <!-- CÓMO FUNCIONA -->
+      <section class="comoFunciona">
+        <h2 id="titleComoFunciona">¿Cómo funciona?</h2>
 
-            <h2 id="titleDestacados">Freelancers Destacados</h2>
+        <div class="cardComoFuncionaContainer">
+          <div class="cardComoFunciona">
+            <img src="../src/img/icoBusqueda.png" alt="Buscar" />
+            <h2>Buscar</h2>
+            <p>Encuentra tu servicio ideal.</p>
+          </div>
 
-            <div class="cardDestacadosContainer">
+          <div class="cardComoFunciona">
+            <img src="../src/img/comparar.png" alt="Comparar" />
+            <h2>Comparar</h2>
+            <p>Revisa perfiles, experiencia y valoraciones.</p>
+          </div>
 
-                <div class="cardDestacado">
-                    <img src="https://images.pexels.com/photos/1604024/pexels-photo-1604024.jpeg" alt="Foto de perfil">
-                    <h2>Juan Pérez</h2>
-                    <p>Diseñador web</p>
-                    <p>⭐⭐⭐⭐⭐ 4.9</p>
-                    <button>Ver Perfil</button>
-                </div>
+          <div class="cardComoFunciona">
+            <i class="fa-regular fa-comments" aria-hidden="true"></i>
+            <h2>Contactar</h2>
+            <p>Habla directamente con el profesional.</p>
+          </div>
 
-                <div class="cardDestacado">
-                    <img src="https://images.pexels.com/photos/16323580/pexels-photo-16323580.jpeg" alt="Foto de perfil">
-                    <h2>Pedro Sanchez</h2>
-                    <p>Full Stack Developer</p>
-                    <p>⭐⭐⭐⭐⭐ 4.9</p>
-                    <button>Ver Perfil</button>
-                </div>
+          <div class="cardComoFunciona">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <h2>Contratar</h2>
+            <p>Comienza tu proyecto de forma rápida y segura.</p>
+          </div>
+        </div>
+      </section>
 
-                <div class="cardDestacado">
-                    <img src="https://images.pexels.com/photos/9034719/pexels-photo-9034719.jpeg" alt="Foto de perfil">
-                    <h2>Alonso Mazza</h2>
-                    <p>Marketing CN</p>
-                    <p>⭐⭐⭐⭐⭐ 4.9</p>
-                    <button>Ver Perfil</button>
-                </div>
+      <!-- RESEÑAS -->
+      <section class="reseñas" id="resenas">
+        <h2 id="titleResenas">Lo que dicen nuestros usuarios</h2>
 
-            </div>
+        <div class="reseñasCardContainer">
+          <div class="cardReseña">
+            <p>"Encontré un diseñador excelente en menos de una hora."</p>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Ana Gómez</p>
+          </div>
 
-        </section>
+          <div class="cardReseña">
+            <p>"Excelente plataforma para encontrar desarrolladores."</p>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Carlos Fernández</p>
+          </div>
 
-        <!-- CÓMO FUNCIONA -->
-        <section class="comoFunciona">
-
-            <h2 id="titleComoFunciona">¿Cómo funciona?</h2>
-
-            <div class="cardComoFuncionaContainer">
-
-                <div class="cardComoFunciona">
-                    <img src="../src/img/icoBusqueda.png" alt="Buscar">
-                    <h2>Buscar</h2>
-                    <p>Encuentra tu servicio ideal.</p>
-                </div>
-
-                <div class="cardComoFunciona">
-                    <img src="../src/img/comparar.png" alt="Comparar">
-                    <h2>Comparar</h2>
-                    <p>Revisa perfiles, experiencia y valoraciones.</p>
-                </div>
-
-                <div class="cardComoFunciona">
-                    <img src="../src/img/contactar.png" alt="Contactar">
-                    <h2>Contactar</h2>
-                    <p>Habla directamente con el profesional.</p>
-                </div>
-
-                <div class="cardComoFunciona">
-                    <img src="../src/img/contratar.png" alt="Contratar">
-                    <h2>Contratar</h2>
-                    <p>Comienza tu proyecto de forma rápida y segura.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- RESEÑAS -->
-        <section class="reseñas" id="reseñas">
-
-            <h2 id="titleResenas">Lo que dicen nuestros usuarios</h2>
-
-            <div class="reseñasCardContainer">
-
-                <div class="cardReseña">
-                    <p>"Encontré un diseñador excelente en menos de una hora."</p>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Ana Gómez</p>
-                </div>
-
-                <div class="cardReseña">
-                    <p>"Excelente plataforma para encontrar desarrolladores."</p>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Carlos Fernández</p>
-                </div>
-
-                <div class="cardReseña">
-                    <p>"Muy fácil de usar y con profesionales de calidad."</p>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Lucía Rodríguez</p>
-                </div>
-
-            </div>
-
-        </section>
-
+          <div class="cardReseña">
+            <p>"Muy fácil de usar y con profesionales de calidad."</p>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Lucía Rodríguez</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer id="contacto">
+      <div>
+        <img
+          src="../docs/tie-up/logo-tie-up-transparente.png"
+          alt="Logo de DevConnect"
+        />
+        <p>Conectando talento con oportunidades.</p>
+      </div>
 
-        <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <p>Conectando talento con oportunidades.</p>
-        </div>
+      <div>
+        <h3>Explorar</h3>
 
-        <div>
-            <h3>Explorar</h3>
+        <ul>
+          <li><span class="footerText">Sobre nosotros</span></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#freelancers">Freelancers</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
 
-            <ul>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Freelancers</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+      <div>
+        <h3>Recursos</h3>
 
-        </div>
+        <ul>
+          <li><a href="soporte.html">Ayuda</a></li>
+          <li><span class="footerText">Preguntas frecuentes</span></li>
+          <li><span class="footerText">Política de privacidad</span></li>
+          <li><span class="footerText">Términos y condiciones</span></li>
+        </ul>
+      </div>
 
-        <div>
-            <h3>Recursos</h3>
+      <div>
+        <h3>Contacto Directo</h3>
 
-            <ul>
-                <li><a href="../html/soporte.html">Ayuda</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h3>Contacto Directo</h3>
-
-            <p>devconnectinfo@gmail.com</p>
-            <p>+598 12 345 678</p>
-
-        </div>
-
+        <p>devconnectinfo@gmail.com</p>
+        <p>+598 12 345 678</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

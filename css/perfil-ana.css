@@ -1,0 +1,118 @@
+/*========================
+    RESET
+    ======================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root {
+  --verdeClaro: #50b4aa;
+  --verdeMedio: #3f928a;
+  --verdeOscuro: #306e68;
+  --blanco: #ffffff;
+  --pastelClaro: #f3eddf;
+  --pastelOscuro: #e5d8ba;
+}
+
+/*===========================
+    BODY
+===========================*/
+body {
+  background-color: var(--pastelClaro);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*===========================
+    NAVBAR
+===========================*/
+.navBar img {
+  width: 200px;
+}
+
+.navBar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+}
+
+.navBar ul {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+}
+
+/*=======================
+    PERFIL
+=======================*/
+
+.perfilContainer img {
+  width: 100px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.box1-box2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#box1 {
+  background-color: red;
+  display: flex;
+
+  align-items: center;
+  justify-content: left;
+
+  gap: 30px;
+}
+
+#box1 img {
+  margin: 10px;
+  margin-left: 100px;
+}
+
+#box2 {
+  background-color: var(--verdeClaro);
+  border-radius: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.box3-box4 {
+  display: grid;
+  grid-template-columns: 4.5fr 3fr;
+}
+
+#box3 {
+  background-color: green;
+}
+
+#box4 {
+  background-color: yellow;
+}
+
+.skill {
+  background-color: grey;
+  border-radius: 20px;
+  padding: 5px;
+}

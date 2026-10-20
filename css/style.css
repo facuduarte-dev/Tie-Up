@@ -2,129 +2,129 @@
    RESET
 =========================== */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===========================
    VARIABLES
 =========================== */
 
-:root{
-    --verdeClaro: #50b4aa;
-    --verdeMedio: #3f928a;
-    --verdeOscuro: #306e68;
-    --blanco: #ffffff;
-    --pastelClaro: #f3eddf;
-    --pastelOscuro: #e5d8ba;
+:root {
+  --verdeClaro: #50b4aa;
+  --verdeMedio: #3f928a;
+  --verdeOscuro: #306e68;
+  --blanco: #ffffff;
+  --pastelClaro: #f3eddf;
+  --pastelOscuro: #e5d8ba;
 }
 
 /* ===========================
    BODY
 =========================== */
 
-body{
-    background-color: var(--pastelClaro);
-    color: var(--verdeOscuro);
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: var(--pastelClaro);
+  color: var(--verdeOscuro);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ===========================
    NAVBAR
 =========================== */
 
-.navBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: var(--blanco);
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: var(--blanco);
 }
 
-.navBar img{
-    width: 200px;
+.navBar img {
+  width: 200px;
 }
 
-.navBar ul{
-    display: flex;
-    gap: 40px;
-    list-style: none;
+.navBar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
-.navBar a{
-    text-decoration: none;
-    color: var(--verdeOscuro);
-    transition: .3s;
+.navBar a {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+  transition: 0.3s;
 }
 
-.navBar a:hover{
-    color: var(--verdeClaro);
+.navBar a:hover {
+  color: var(--verdeClaro);
 }
 
 /* ===========================
    HERO
 =========================== */
 
-.hero{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 60px;
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
 }
 
-.heroTxt{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.heroTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.hero h1{
-    width: 450px;
-    font-size: 3rem;
+.hero h1 {
+  width: 450px;
+  font-size: 3rem;
 }
 
-.hero p{
-    width: 350px;
-    line-height: 1.6;
+.hero p {
+  width: 350px;
+  line-height: 1.6;
 }
 
-.heroImg{
-    width: 350px;
+.heroImg {
+  width: 350px;
 }
 
-.divHero{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.divHero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.divHero input{
-    width: 350px;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
+.divHero input {
+  width: 350px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
 }
 
-.hero a{
-    text-decoration: none;
+.hero a {
+  text-decoration: none;
 }
 
-#aHero1{
-    background-color: var(--verdeOscuro);
-    color: var(--blanco);
-    padding: 12px 20px;
-    border-radius: 25px;
-    margin-right: 10px;
+#aHero1 {
+  background-color: var(--verdeOscuro);
+  color: var(--blanco);
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin-right: 10px;
 }
 
-#aHero2{
-    border: 2px solid var(--verdeOscuro);
-    color: var(--verdeOscuro);
-    padding: 10px 20px;
-    border-radius: 25px;
+#aHero2 {
+  border: 2px solid var(--verdeOscuro);
+  color: var(--verdeOscuro);
+  padding: 10px 20px;
+  border-radius: 25px;
 }
 
 /* ===========================
@@ -134,288 +134,292 @@ body{
 #titleCatPopulares,
 #titleDestacados,
 #titleComoFunciona,
-#titleResenas{
-    text-align: center;
-    margin: 60px 0;
-    font-size: 2rem;
+#titleResenas {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 2rem;
 }
 /* ===========================
    CATEGORÍAS
 =========================== */
 
-.cardContainer{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: space-evenly;
-    gap: 40px;
-    padding: 0 40px;
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-evenly;
+  gap: 40px;
+  padding: 0 40px;
 }
 
-.card{
-    width: 260px;
-    height: 220px;
+.card {
+  width: 260px;
+  height: 220px;
 
-    background-color: var(--blanco);
-    border-radius: 20px;
-    padding: 30px;
+  background-color: var(--blanco);
+  border-radius: 20px;
+  padding: 30px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 
-    text-align: center;
+  text-align: center;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-    transition: .3s;
+  transition: 0.3s;
 }
 
-.card:hover{
-    transform: translateY(-6px);
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.card i{
-    font-size: 45px;
-    color: var(--verdeClaro);
+.card i {
+  font-size: 45px;
+  color: var(--verdeClaro);
 }
 
-.card h2{
-    margin: 0;
+.card h2 {
+  margin: 0;
 }
 
-.card p{
-    line-height: 1.5;
+.card p {
+  line-height: 1.5;
 }
 
 /* ===========================
    DESTACADOS
 =========================== */
 
-.destacados{
-    padding: 60px 0;
+.destacados {
+  padding: 60px 0;
 }
 
-.cardDestacadosContainer{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
+.cardDestacadosContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-evenly;
 }
 
-.cardDestacado{
+.cardDestacado {
+  width: 400px;
+  height: 380px;
 
-    width: 400px;
-    height: 380px;
+  background-color: var(--blanco);
+  color: black;
 
-    background-color: var(--blanco);
-    color: black;
+  padding: 20px;
+  border-radius: 20px;
 
-    padding: 20px;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
-
-    transition: .3s;
+  transition: 0.3s;
 }
 
-.cardDestacado:hover{
-    transform: translateY(-6px);
+.cardDestacado:hover {
+  transform: translateY(-6px);
 }
 
-.cardDestacado img{
-    width: 100%;
-    height: 170px;
+.cardDestacado img {
+  width: 100%;
+  height: 170px;
 
-    object-fit: cover;
-    border-radius: 15px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.cardDestacado h2{
-    margin-top: 5px;
+.cardDestacado h2 {
+  margin-top: 5px;
 }
 
-.cardDestacado button{
-    margin-top: auto;
+.cardDestacado button {
+  margin-top: auto;
 
-    background-color: var(--verdeOscuro);
-    color: var(--blanco);
+  background-color: var(--verdeOscuro);
+  color: var(--blanco);
 
-    border: none;
-    border-radius: 10px;
+  border: none;
+  border-radius: 10px;
 
-    padding: 12px;
+  padding: 12px;
 
-    cursor: pointer;
-    transition: .3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.cardDestacado button:hover{
-    background-color: var(--verdeMedio);
+.cardDestacado button:hover {
+  background-color: var(--verdeMedio);
 }
 
 /* ===========================
    COMO FUNCIONA
 =========================== */
 
-.comoFunciona{
-    padding: 60px 0;
+.comoFunciona {
+  padding: 60px 0;
 }
 
-.cardComoFuncionaContainer{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: space-evenly;
+.cardComoFuncionaContainer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-evenly;
 }
 
-.cardComoFunciona{
+.cardComoFunciona {
+  width: 280px;
+  height: 280px;
 
-    width: 280px;
-    height: 280px;
+  background-color: var(--blanco);
+  color: black;
 
-    background-color: var(--blanco);
-    color: black;
+  padding: 30px;
+  border-radius: 20px;
 
-    padding: 30px;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  text-align: center;
 
-    text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
-
-    transition: .3s;
+  transition: 0.3s;
 }
 
-.cardComoFunciona:hover{
-    transform: translateY(-6px);
+.cardComoFunciona:hover {
+  transform: translateY(-6px);
 }
 
-.cardComoFunciona img{
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
+.cardComoFunciona img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
 }
 
-.cardComoFunciona h2{
-    margin: 0;
+.cardComoFunciona > i {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  color: var(--verdeClaro);
+  font-size: 64px;
 }
 
-.cardComoFunciona p{
-    line-height: 1.5;
+.cardComoFunciona h2 {
+  margin: 0;
+}
+
+.cardComoFunciona p {
+  line-height: 1.5;
 }
 
 /* ===========================
    RESEÑAS
 =========================== */
 
-.reseñas{
-    
-    padding: 70px 40px;
+.reseñas {
+  padding: 70px 40px;
 }
 
-.reseñasCardContainer{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
-    gap: 40px;
+.reseñasCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-evenly;
+  gap: 40px;
 }
 
-.cardReseña{
+.cardReseña {
+  width: 340px;
+  height: 220px;
 
-    width: 340px;
-    height: 220px;
+  background-color: var(--blanco);
 
-    background-color: var(--blanco);
+  padding: 30px;
+  border-radius: 20px;
 
-    padding: 30px;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
-
-    transition: .3s;
+  transition: 0.3s;
 }
 
-.cardReseña:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+.cardReseña:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-.cardReseña p{
-    line-height: 1.6;
+.cardReseña p {
+  line-height: 1.6;
 }
 
-.cardReseña p:first-child{
-    font-style: italic;
+.cardReseña p:first-child {
+  font-style: italic;
 }
 
-.cardReseña p:last-child{
-    font-weight: bold;
-    color: var(--verdeOscuro);
+.cardReseña p:last-child {
+  font-weight: bold;
+  color: var(--verdeOscuro);
 }
-
-
 
 footer {
-    background-color: #306e68;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 40px 60px;
-    gap: 30px;
+  background-color: #306e68;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 60px;
+  gap: 30px;
 }
 
 footer div {
-    width: 220px;
+  width: 220px;
 }
 
 footer img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 15px;
+  width: 200px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 footer p {
-    color: #f3eddf;
-    font-size: 15px;
-    line-height: 1.5;
+  color: #f3eddf;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 footer h3 {
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 footer li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-footer a {
-    color: #f3eddf;
-    text-decoration: none;
-    font-size: 15px;
+footer a,
+.footerText {
+  color: #f3eddf;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 footer a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }

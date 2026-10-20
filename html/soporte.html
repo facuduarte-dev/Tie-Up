@@ -1,114 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto | DevConnect</title>
 
-    <link rel="stylesheet" href="contacto.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
     <!-- Iconos -->
-    <link rel="stylesheet"
-        href="../css/soporte.css">
-</head>
+    <link rel="stylesheet" href="../css/soporte.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
 
-<body>
+  <body class="page-with-navbar support-page">
+    <header class="site-header">
+      <nav class="navBar">
+        <div class="logo">
+          <img
+            src="../docs/tie-up/logo-tie-up-transparente.png"
+            alt="Logo de DevConnect"
+          />
+        </div>
 
-    
+        <div class="navLinks">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#freelancers">Freelancers</a></li>
+            <li><a href="index.html#resenas">Reseñas</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+          </ul>
+        </div>
+
+        <div class="navSession">
+          <a href="login.html">Registrarse / Iniciar Sesión</a>
+        </div>
+      </nav>
+    </header>
 
     <section class="contacto">
+      <span class="etiqueta">
+        <i class="fa-solid fa-headset"></i>
+        ESTAMOS PARA AYUDARTE
+      </span>
 
-        <span class="etiqueta">
-            <i class="fa-solid fa-headset"></i>
-            ESTAMOS PARA AYUDARTE
-        </span>
+      <h1>Contacta con soporte</h1>
 
-        <h1>Contacta con soporte</h1>
+      <p class="descripcion">
+        ¿Tienes dudas, problemas o sugerencias?<br />
+        Nuestro equipo está listo para ayudarte.
+      </p>
 
-        <p class="descripcion">
-            ¿Tienes dudas, problemas o sugerencias?<br>
-            Nuestro equipo está listo para ayudarte.
-        </p>
+      <form class="formulario">
+        <div class="grupo">
+          <div class="icono">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
 
-        <form class="formulario">
+          <div class="contenido">
+            <label for="support-topic">¿En qué te podemos ayudar?</label>
 
-            <div class="grupo">
+            <small>Cuéntanos en qué podemos ayudarte.</small>
 
-                <div class="icono">
-                    <i class="fa-regular fa-envelope"></i>
-                </div>
+            <input id="support-topic" name="topic" type="text" />
+          </div>
+        </div>
 
-                <div class="contenido">
+        <div class="grupo">
+          <div class="icono">
+            <i class="fa-regular fa-file-lines"></i>
+          </div>
 
-                    <label>¿En que te podemos ayudar?</label>
+          <div class="contenido">
+            <label for="support-message">Describe tu consulta</label>
 
-                    <small>Cuéntanos en que podemos ayudarte.</small>
+            <small
+              >Cuéntanos más detalles sobre tu consulta o tu problema.</small
+            >
 
-                    <input placeholder="" type="text">
+            <textarea id="support-message" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+        </div>
 
-                </div>
+        <div class="grupo">
+          <div class="icono">
+            <i class="fa-solid fa-at"></i>
+          </div>
 
-            </div>
+          <div class="contenido">
+            <label for="support-email">Correo electrónico</label>
 
+            <small>Te responderemos a este correo.</small>
 
-            <div class="grupo">
+            <input id="support-email" name="email" type="email" placeholder="ejemplo@correo.com" />
+          </div>
+        </div>
+      </form>
 
-                <div class="icono">
-                    <i class="fa-regular fa-file-lines"></i>
-                </div>
+      <button class="btn">
+        <i class="fa-regular fa-paper-plane"></i>
+        Enviar un mensaje
+      </button>
 
-                <div class="contenido">
-
-                    <label>Describe tu consulta</label>
-
-                    <small>Cuéntanos más detalles sobre tu consulta o tu problema.</small>
-
-                    <textarea
-                        placeholder="Escribe tu mensaje aquí..."></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="grupo">
-
-                <div class="icono">
-                    <i class="fa-solid fa-at"></i>
-                </div>
-
-                <div class="contenido">
-
-                    <label>Correo electrónico</label>
-
-                    <small>Te responderemos a este correo.</small>
-
-                    <input
-                        type="email"
-                        placeholder="ejemplo@correo.com">
-
-                </div>
-
-            </div>
-
-        </form>
-
-        <button class="btn">
-            <i class="fa-regular fa-paper-plane"></i>
-            Enviar un mensaje
-        </button>
-
-        <p class="seguridad">
-            <i class="fa-regular fa-circle-check"></i>
-            Tu información está segura con nosotros
-        </p>
-
+      <p class="seguridad">
+        <i class="fa-regular fa-circle-check"></i>
+        Tu información está segura con nosotros
+      </p>
     </section>
-
-</body>
-
+  </body>
 </html>

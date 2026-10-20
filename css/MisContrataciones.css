@@ -1,0 +1,12 @@
+body {
+  background-color: var(--);
+}
+
+.proyecto {
+  display: flex;
+  gap: 30px;
+}
+
+#fotoPerfil {
+  width: 50px;
+}

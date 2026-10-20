@@ -1,286 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DevConnect | Iniciar sesión</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/login.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
 
-<body>
+  <body class="page-with-navbar login-page">
+    <header class="site-header">
+      <nav class="navBar">
+        <div class="logo">
+          <img
+            src="../docs/tie-up/logo-tie-up-transparente.png"
+            alt="Logo de DevConnect"
+          />
+        </div>
+
+        <div class="navLinks">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#freelancers">Freelancers</a></li>
+            <li><a href="index.html#resenas">Reseñas</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+          </ul>
+        </div>
+
+        <div class="navSession">
+          <a href="login.html">Registrarse / Iniciar Sesión</a>
+        </div>
+      </nav>
+    </header>
 
     <main class="login">
+      <section class="titulo">
+        <h1>Bienvenido a Dev<span>Connect</span></h1>
 
-        <section class="titulo">
+        <p>Inicia sesión o crea tu cuenta para comenzar</p>
+      </section>
 
-            <h1>
-                Bienvenido a
-                Dev<span>Connect</span>
-            </h1>
+      <section class="contenedor-login">
+        <!--button to exit-->
 
-            <p>
-                Inicia sesión o crea tu cuenta para comenzar
-            </p>
+        <a href="index.html">exit</a>
+        <!-- login -->
 
-        </section>
+        <div class="card login-card">
+          <div class="icono-principal">
+            <i class="fa-regular fa-user"></i>
+          </div>
 
+          <h2>Iniciar sesión</h2>
 
-        <section class="contenedor-login">
+          <p>Accede a tu cuenta para continuar</p>
 
-            <!-- login -->
+          <form action="../php/login.php" method="POST">
+            <div class="campo">
+              <label for="login-email">Correo electrónico</label>
 
-            <div class="card login-card">
+              <div class="input-icon">
+                <i class="fa-regular fa-envelope"></i>
 
-                <div class="icono-principal">
-                    <i class="fa-regular fa-user"></i>
-                </div>
-
-                <h2>Iniciar sesión</h2>
-
-                <p>
-                    Accede a tu cuenta para continuar
-                </p>
-
-                <form>
-
-                    <div class="campo">
-
-                        <label>Correo electrónico</label>
-
-                        <div class="input-icon">
-
-                            <i class="fa-regular fa-envelope"></i>
-
-                            <input
-                                type="email"
-                                placeholder="tu@email.com">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>Contraseña</label>
-
-                        <div class="input-icon">
-
-                            <i class="fa-solid fa-lock"></i>
-
-                            <input
-                                type="password"
-                                placeholder="********">
-
-                            <i class="fa-regular fa-eye-slash ojo"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="extras">
-
-                        <label>
-
-                            <input type="checkbox">
-
-                            Recordarme
-
-                        </label>
-
-                        <a href="../html/index.html">
-                            ¿Olvidaste tu contraseña?
-                        </a>
-
-                    </div>
-
-                    <button >
-
-                        Iniciar sesión
-
-                    </button>
-
-                </form>
-
-
-                <div class="separador">
-
-                    <span>O continúa con</span>
-
-                </div>
-
-
-                <div class="social">
-
-                    <a href="#">
-
-                        <i class="fa-brands fa-google"></i>
-
-                        Google
-
-                    </a>
-
-                    <a href="#">
-
-                        <i class="fa-brands fa-github"></i>
-
-                        GitHub
-
-                    </a>
-
-                </div>
-
+                <input
+                  type="email"
+                  id="login-email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
             </div>
 
-
-
-
-
-
-
-            <!-- registro -->
-
-            <div class="card registro-card">
-
-                <div class="icono-principal">
-
-                    <i class="fa-solid fa-user-plus"></i>
-
-                </div>
-
-                <h2>Crear cuenta</h2>
-
-                <p>
-
-                    Únete a DevConnect y consigue más oportunidades
-
-                </p>
-
-                <form action="../php/register.php" method="POST">
-
-                    <div class="campo">
-
-                        <label>Nombre completo</label>
-
-                        <div class="input-icon">
-
-                            <i class="fa-regular fa-user"></i>
-
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Tu nombre completo"
-                                required>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>Correo electrónico</label>
-
-                        <div class="input-icon">
-
-                            <i class="fa-regular fa-envelope"></i>
-
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="tu@email.com"
-                                required>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>Contraseña</label>
-
-                        <div class="input-icon">
-
-                            <i class="fa-solid fa-lock"></i>
-
-                            <input
-                                type="password"
-                                name="password"
-                                placeholder="********"
-                                required>
-
-                            <i class="fa-regular fa-eye-slash ojo"></i>
-
-                        </div>
-
-                        <small>
-
-                            <i class="fa-regular fa-circle-check"></i>
-
-                            Mínimo 8 caracteres
-
-                        </small>
-
-                    </div>
-
-
-                    <button type="submit">
-
-                        Registrarse
-
-                    </button>
-
-                </form>
-
-
-                <div class="separador">
-
-                    <span>O continúa con</span>
-
-                </div>
-
-
-                <div class="social">
-
-                    <a href="#">
-
-                        <i class="fa-brands fa-google"></i>
-
-                        Google
-
-                    </a>
-
-                    <a href="#">
-
-                        <i class="fa-brands fa-github"></i>
-
-                        GitHub
-
-                    </a>
-
-                </div>
-
+            <div class="campo">
+              <label for="login-password">Contraseña</label>
+
+              <div class="input-icon">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  placeholder="********"
+                  required
+                />
+
+                <i class="fa-regular fa-eye-slash ojo"></i>
+              </div>
             </div>
 
-        </section>
+            <div id="feedback-login" class="feedback"></div>
 
+            <div class="extras">
+              <label>
+                <input type="checkbox" />
 
-        <p class="seguridad">
+                Recordarme
+              </label>
 
-            <i class="fa-solid fa-shield-halved"></i>
+              <a href="index.html"> ¿Olvidaste tu contraseña? </a>
+            </div>
 
-            Tu información está segura con nosotros.
+            <button type="submit">Iniciar sesión</button>
+          </form>
 
-        </p>
+          <div class="separador">
+            <span>O continúa con</span>
+          </div>
 
+          <div class="social">
+            <button type="button" disabled aria-disabled="true">
+              <i class="fa-brands fa-google"></i>
+
+              Google
+            </button>
+
+            <button type="button" disabled aria-disabled="true">
+              <i class="fa-brands fa-github"></i>
+
+              GitHub
+            </button>
+          </div>
+        </div>
+
+        <!-- registro -->
+
+        <div class="card registro-card">
+          <div class="icono-principal">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+
+          <h2>Crear cuenta</h2>
+
+          <p>Únete a DevConnect y consigue más oportunidades</p>
+
+          <form action="../php/register.php" method="POST">
+            <div class="campo">
+              <label for="register-name">Nombre completo</label>
+
+              <div class="input-icon">
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                  type="text"
+                  id="register-name"
+                  name="name"
+                  placeholder="Tu nombre completo"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="register-email">Correo electrónico</label>
+
+              <div class="input-icon">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="register-email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="register-password">Contraseña</label>
+
+              <div class="input-icon">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="register-password"
+                  name="password"
+                  placeholder="********"
+                  required
+                />
+
+                <i class="fa-regular fa-eye-slash ojo"></i>
+              </div>
+
+              <small>
+                <i class="fa-regular fa-circle-check"></i>
+
+                Mínimo 8 caracteres
+              </small>
+            </div>
+
+            <div id="feedback-register" class="feedback"></div>
+
+            <button type="submit">Registrarse</button>
+          </form>
+
+          <div class="separador">
+            <span>O continúa con</span>
+          </div>
+
+          <div class="social">
+            <button type="button" disabled aria-disabled="true">
+              <i class="fa-brands fa-google"></i>
+
+              Google
+            </button>
+
+            <button type="button" disabled aria-disabled="true">
+              <i class="fa-brands fa-github"></i>
+
+              GitHub
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <p class="seguridad">
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Tu información está segura con nosotros.
+      </p>
     </main>
 
-</body>
-
-</html>  
+    <script src="../js/script.js"></script>
+  </body>
+</html>

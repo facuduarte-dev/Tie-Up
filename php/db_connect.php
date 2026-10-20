@@ -3,7 +3,7 @@
 $host = "127.0.0.1";
 $usuario = "root";
 $contrasena = ""; // Contraseña de tu usuario de MySQL
-$baseDeDatos = "DevConnectITS";
+$baseDeDatos = "TieUp";
 $puerto = 3306;
 
 $conn = new mysqli(
@@ -19,5 +19,3 @@ if ($conn->connect_error) {
 }
 
 $conn->set_charset("utf8mb4");
-
-    

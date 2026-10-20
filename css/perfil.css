@@ -1,0 +1,110 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root {
+  --verdeClaro: #50b4aa;
+  --verdeMedio: #3f928a;
+  --verdeOscuro: #306e68;
+  --blanco: #ffffff;
+  --pastelClaro: #f3eddf;
+  --pastelOscuro: #e5d8ba;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body {
+  background-color: var(--pastelClaro);
+  color: var(--verdeOscuro);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navBar img {
+  width: 200px;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.navBar ul {
+  display: flex;
+  gap: 40px;
+
+  list-style: none;
+}
+
+/*============================
+    TITLE
+=============================*/
+
+.title {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+/*============================
+    PORFILE
+=============================*/
+
+.porfile img {
+  width: 100px;
+
+  display: flex;
+}
+.porfile {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.porfile h2 {
+  margin-bottom: 10px;
+}
+.porfile ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  list-style: none;
+}
+
+.porfile a {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+}
+
+.form {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}

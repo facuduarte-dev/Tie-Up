@@ -1,81 +1,83 @@
 <?php
 
-// Load the database connection.
 require_once "db_connect.php";
 
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    //add trim to delete te spaces " " 
-    $name = trim($_POST["name"]);
-    $email = trim($_POST["email"]);
-    $password = $_POST["password"];
-
-
-   
-
-    //validations before saving it to the database.
-
-    // Require a non-empty name.
-    if($name === ""){
-        echo "nombre de usuario obligatorio ";
-        exit();
-    }
-
-    //validate the email format.
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        echo "El correo electronico ingresado no es valido";
-        exit();
-    }
-
-    // Require a minimum password length.
-    if(strlen($password) < 8){
-        echo "la contraseña tiene un minimo de 8 caracteres";
-        exit();
-    }
-
-    //require at least one uppercase letter.
-    if (!preg_match("/[A-Z]/", $password)) {
-    echo "La contraseña debe contener al menos una letra mayúscula";
+function redirectToRegister(string $message, string $type = "register_error"): void
+{
+    header("Location: ../html/login.html?" . $type . "=" . urlencode($message));
     exit();
 }
 
- //require at least one lowercase letter.
-    if (!preg_match("/[a-z]/", $password)) {
-    echo "La contraseña debe contener al menos una letra minúscula";
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: ../html/login.html");
     exit();
 }
 
+$name = trim($_POST["name"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$password = $_POST["password"] ?? "";
 
- //require at least one number.
-    if (!preg_match("/[0-9]/", $password)) {
-    echo "La contraseña debe contener al menos un numero ";
-    exit();
+if ($name === "") {
+    redirectToRegister("El nombre completo es obligatorio");
 }
 
-    if(!preg_match('/[!@#$%^&*]/', $password)){
-        echo "La contraseña debe contener al menos un caracter especial";
-        exit();
-    }
-
-
-    // Hash the password before storing it.
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-    // Define the SQL query using placeholders.
-    $sql = "INSERT INTO usuarios (name, email, password) VALUES
-     (?, ?, ?)";
-
-
-    // Prepare the SQL query.
-    $stmt = $conn->prepare($sql);
-
-    // Bind the values to the placeholders.
-    $stmt->bind_param("sss", $name, $email, $passwordHash);
-
-    // Execute the prepared query.
-    $stmt->execute();
-
-    echo "luciogay";
-
-    echo "Los datos se obtuvieron de manera correcta";
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    redirectToRegister("El correo electrónico no es válido");
 }
+
+if (strlen($password) < 8) {
+    redirectToRegister("La contraseña debe tener al menos 8 caracteres");
+}
+
+if (!preg_match("/[A-Z]/", $password)) {
+    redirectToRegister("La contraseña debe contener al menos una letra mayúscula");
+}
+
+if (!preg_match("/[a-z]/", $password)) {
+    redirectToRegister("La contraseña debe contener al menos una letra minúscula");
+}
+
+if (!preg_match("/[0-9]/", $password)) {
+    redirectToRegister("La contraseña debe contener al menos un número");
+}
+
+if (!preg_match('/[!@#$%^&*]/', $password)) {
+    redirectToRegister("La contraseña debe contener al menos un carácter especial");
+}
+
+$checkSql = "SELECT id_user FROM usuarios WHERE email = ?";
+$checkStmt = $conn->prepare($checkSql);
+
+if (!$checkStmt) {
+    redirectToRegister("No se pudo comprobar el correo electrónico");
+}
+
+$checkStmt->bind_param("s", $email);
+$checkStmt->execute();
+$existingUser = $checkStmt->get_result();
+
+if ($existingUser->num_rows > 0) {
+    redirectToRegister("Ya existe una cuenta con ese correo electrónico");
+}
+
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+$sql = "INSERT INTO usuarios (name, email, password) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    redirectToRegister("No se pudo preparar el registro");
+}
+
+$stmt->bind_param("sss", $name, $email, $passwordHash);
+
+try {
+    $registered = $stmt->execute();
+} catch (mysqli_sql_exception $error) {
+    redirectToRegister("No se pudo completar el registro");
+}
+
+if (!$registered) {
+    redirectToRegister("No se pudo completar el registro");
+}
+
+redirectToRegister("La cuenta fue creada correctamente", "register_success");
