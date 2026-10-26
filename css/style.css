@@ -29,6 +29,7 @@ body {
   background-color: var(--pastelClaro);
   color: var(--verdeOscuro);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* ===========================
@@ -358,6 +359,7 @@ body {
 footer img {
   width: 200px;
   height: auto;
+  filter: brightness(0) invert(1);
 }
 
 footer {
@@ -501,7 +503,9 @@ footer a:hover {
 @media (max-width: 767px) {
   .hero {
     flex-direction: column;
-    margin: 30px 20px;
+    gap: 28px;
+    width: auto;
+    margin: 30px 20px 44px;
     text-align: center;
   }
 
@@ -568,23 +572,24 @@ footer a:hover {
 
   .card {
     height: auto;
-    min-height: 220px;
-    padding: 25px;
+    min-height: 160px;
+    padding: 22px;
   }
 
   .cardDestacado {
     height: auto;
-    min-height: 380px;
+    min-height: 0;
   }
 
   .ComoFunciona {
     height: auto;
-    min-height: 260px;
+    min-height: 200px;
+    padding: 24px;
   }
 
   .cardReseña {
     height: auto;
-    min-height: 220px;
+    min-height: 170px;
   }
 
   .reseñas {
