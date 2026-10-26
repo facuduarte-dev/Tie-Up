@@ -15,8 +15,8 @@ if (!isset($_SESSION["user_id"])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/perfil.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/perfil.css?v=20261026-2" />
+  <link rel="stylesheet" href="../css/navbar.css?v=20261026-2" />
   <title>Mi perfil</title>
 </head>
 
@@ -57,7 +57,7 @@ if (!isset($_SESSION["user_id"])) {
   <section class="porfile">
 
     <div>
-      <img id="fotoPerfil" src="../src/img/clker-free-vector-images-avatar-294480.svg" alt="Foto de perfil">
+      <img id="fotoPerfil" src="../src/img/clker-free-vector-images-avatar-294480.svg?v=20261026-2" alt="Foto de perfil">
 
       <a href="">Cambiar foto</a>
       <h2>Información personal</h2>
@@ -115,6 +115,6 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
-  <script src="../js/navbar.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script src="../js/navbar.js?v=20261026-2"></script>
+  <script src="../js/i18n.js?v=20261026-2"></script>
 </html>
