@@ -27,7 +27,7 @@
 
 body {
   background-color: var(--pastelClaro);
-  color: var(--verdeOscuro);
+  color: #111111;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
@@ -55,7 +55,7 @@ body {
 .hero h1 {
   width: 450px;
   font-size: 3rem;
-  color: var(--verdeOscuro);
+  color: #111111;
 }
 
 .hero p {
@@ -95,7 +95,7 @@ body {
 
 #aHero2 {
   border: 2px solid var(--verdeOscuro);
-  color: var(--verdeOscuro);
+  color: #111111;
   padding: 10px 20px;
   border-radius: 25px;
 }
@@ -111,6 +111,7 @@ body {
   text-align: center;
   margin: 60px 0;
   font-size: 2rem;
+  color: #111111;
 }
 
 /* ===========================
@@ -297,7 +298,7 @@ body {
 
 .ComoFunciona h2 {
   margin: 0;
-  color: var(--verdeOscuro);
+  color: #111111;
 }
 
 .ComoFunciona p {
@@ -353,7 +354,7 @@ body {
 
 .cardReseña p:last-child {
   font-weight: bold;
-  color: var(--verdeOscuro);
+  color: #111111;
 }
 
 footer img {
