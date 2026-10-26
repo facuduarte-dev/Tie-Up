@@ -27,8 +27,8 @@ if (!isset($_SESSION["user_id"])) {
     <nav class="navBar">
       <div class="logo">
         <img
-          src="../docs/tie-up/logo-tie-up-transparente.png"
-          alt="Logo de DevConnect" />
+          src="../src/img/logo-tie-up-transparente.png"
+          alt="Logo de Tie-Up" />
       </div>
 
       <div class="navLinks">
