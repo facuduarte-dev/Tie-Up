@@ -1,0 +1,28 @@
+# Configuracion local y credenciales
+config.local.php
+.env
+.env.*
+!.env.example
+
+# Archivos subidos en ejecucion
+uploads/*
+!uploads/.gitkeep
+
+# Salidas y artefactos regenerables
+tmp/
+output/
+*.log
+
+# Cachés y dependencias locales
+__pycache__/
+*.py[cod]
+node_modules/
+vendor/
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/

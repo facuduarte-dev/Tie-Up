@@ -14,6 +14,7 @@
 
 :root {
   --verdeClaro: #50b4aa;
+  --verdeClaroT: rgba(80, 180, 170, 0.4);
   --verdeMedio: #3f928a;
   --verdeOscuro: #306e68;
   --blanco: #ffffff;
@@ -29,42 +30,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*===========================
-    NAVBAR
-===========================*/
-.navBar img {
-  width: 200px;
-}
-
-.navBar {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px 40px;
-}
-
-.navBar ul {
-  display: flex;
-  gap: 20px;
-
-  list-style: none;
-}
-
-.navBar a {
-  text-decoration: none;
-  color: var(--verdeOscuro);
-}
-
 /*=======================
     PERFIL
 =======================*/
 
 .perfilContainer img {
-  width: 100px;
-  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
+
+  border: 4px dashed var(--verdeClaro);
 }
 
 .box1-box2 {
@@ -73,7 +49,6 @@ body {
 }
 
 #box1 {
-  background-color: red;
   display: flex;
 
   align-items: center;
@@ -82,14 +57,15 @@ body {
   gap: 30px;
 }
 
-#box1 img {
-  margin: 10px;
-  margin-left: 100px;
+#box1txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 #box2 {
-  background-color: var(--verdeClaro);
-  border-radius: 100px;
+  background-color: var(--verdeClaroT);
+  border-radius: 20px;
 
   display: flex;
   flex-direction: column;
@@ -98,13 +74,45 @@ body {
   justify-content: center;
 }
 
+#box2 a {
+  background-color: var(--verdeOscuro);
+
+  padding: 10px;
+  border-radius: 10px;
+
+  margin: 10px;
+}
+
 .box3-box4 {
   display: grid;
   grid-template-columns: 4.5fr 3fr;
+
+  margin-top: 20px;
 }
 
 #box3 {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#box3 p {
+  width: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#box3 h2 {
+  margin: 10px;
+}
+
+#box3span {
+  display: flex;
+  justify-content: space-evenly;
+
+  gap: 20px;
 }
 
 #box4 {
@@ -112,7 +120,46 @@ body {
 }
 
 .skill {
-  background-color: grey;
+  background-color: var(--pastelClaro);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   padding: 5px;
+}
+
+.title {
+  padding: 40px 20px 24px;
+  text-align: center;
+}
+
+.perfilContainer {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto 48px;
+}
+
+#box1,
+#box2,
+#box3,
+#box4 {
+  padding: 28px;
+}
+
+@media (max-width: 800px) {
+  .box1-box2,
+  .box3-box4 {
+    grid-template-columns: 1fr;
+  }
+
+  #box1 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #box1 img {
+    margin: 0;
+  }
+
+  #box2 {
+    border-radius: 0;
+  }
 }

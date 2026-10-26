@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevConnect</title>
+    <title>Tie-Up</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../docs/tie-up/logo-tie-up-transparente.png"
+    />
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -36,6 +42,10 @@
         <div class="navSession">
           <a href="login.html">Registrarse / Iniciar Sesión</a>
         </div>
+
+        <button class="menu-hamburguesa" type="button" aria-label="Abrir menú">
+          ☰
+        </button>
       </nav>
     </header>
 
@@ -52,7 +62,7 @@
             contenido en un solo lugar.
           </p>
 
-          <div class="divHero">
+          <div class="divHeroNav">
             <label for="buscarServicio" class="sr-only">Buscar servicio</label>
 
             <input
@@ -68,7 +78,7 @@
           </div>
         </div>
 
-        <div class="heroImage">
+        <div>
           <img
             class="heroImg"
             src="../src/img/imgHero.png"
@@ -78,7 +88,7 @@
       </section>
 
       <!-- CATEGORÍAS -->
-      <section class="catPopulares" id="servicios">
+      <section>
         <h2 id="titleCatPopulares">Categorías Populares</h2>
 
         <div class="cardContainer">
@@ -121,7 +131,7 @@
       </section>
 
       <!-- DESTACADOS -->
-      <section class="destacados" id="freelancers">
+      <section>
         <h2 id="titleDestacados">Freelancers Destacados</h2>
 
         <div class="cardDestacadosContainer">
@@ -145,7 +155,7 @@
             <h2>Pedro Sanchez</h2>
             <p>Full Stack Developer</p>
             <p>⭐⭐⭐⭐⭐ 4.9</p>
-            <button>Ver Perfil</button>
+            <a href="">Ver Perfil</a>
           </div>
 
           <div class="cardDestacado">
@@ -156,35 +166,35 @@
             <h2>Alonso Mazza</h2>
             <p>Marketing CN</p>
             <p>⭐⭐⭐⭐⭐ 4.9</p>
-            <button>Ver Perfil</button>
+            <a href="">Ver Perfil</a>
           </div>
         </div>
       </section>
 
       <!-- CÓMO FUNCIONA -->
-      <section class="comoFunciona">
+      <section>
         <h2 id="titleComoFunciona">¿Cómo funciona?</h2>
 
-        <div class="cardComoFuncionaContainer">
-          <div class="cardComoFunciona">
+        <div class="ComoFuncionaContainer">
+          <div class="ComoFunciona">
             <img src="../src/img/icoBusqueda.png" alt="Buscar" />
             <h2>Buscar</h2>
             <p>Encuentra tu servicio ideal.</p>
           </div>
 
-          <div class="cardComoFunciona">
+          <div class="ComoFunciona">
             <img src="../src/img/comparar.png" alt="Comparar" />
             <h2>Comparar</h2>
             <p>Revisa perfiles, experiencia y valoraciones.</p>
           </div>
 
-          <div class="cardComoFunciona">
+          <div class="ComoFunciona">
             <i class="fa-regular fa-comments" aria-hidden="true"></i>
             <h2>Contactar</h2>
             <p>Habla directamente con el profesional.</p>
           </div>
 
-          <div class="cardComoFunciona">
+          <div class="ComoFunciona">
             <i class="fa-solid fa-handshake" aria-hidden="true"></i>
             <h2>Contratar</h2>
             <p>Comienza tu proyecto de forma rápida y segura.</p>
@@ -220,7 +230,7 @@
 
     <!-- FOOTER -->
     <footer id="contacto">
-      <div>
+      <div id="logo-footer">
         <img
           src="../docs/tie-up/logo-tie-up-transparente.png"
           alt="Logo de DevConnect"
@@ -257,5 +267,6 @@
         <p>+598 12 345 678</p>
       </div>
     </footer>
+    <script src="../js/i18n.js"></script>
   </body>
 </html>

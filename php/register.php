@@ -25,8 +25,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     redirectToRegister("El correo electrónico no es válido");
 }
 
-if (strlen($password) < 8) {
-    redirectToRegister("La contraseña debe tener al menos 8 caracteres");
+if (strlen($password) < 8 || strlen($password) > 12) {
+    redirectToRegister("La contraseña debe tener entre 8 y 12 caracteres");
 }
 
 if (!preg_match("/[A-Z]/", $password)) {

@@ -114,4 +114,5 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
+  <script src="../js/i18n.js"></script>
 </html>

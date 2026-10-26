@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+.menu-hamburguesa {
+  display: none;
+}
+
 .navBar {
   width: 100%;
   min-height: 90px;
@@ -42,7 +46,7 @@
 }
 
 .navBar a {
-  color: var(--verdeOscuro, #306e68);
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -53,12 +57,25 @@
 
 .navSession {
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.page-with-navbar {
-  display: block;
-  margin: 0;
-  padding: 0;
+#language-toggle {
+  min-width: 42px;
+  padding: 7px 10px;
+  border: 1px solid var(--verdeClaro, #50b4aa);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--verdeOscuro, #306e68);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#language-toggle:hover {
+  background: var(--verdeClaro, #50b4aa);
+  color: #fff;
 }
 
 .login-page .login,
@@ -68,15 +85,19 @@
   padding-left: 20px;
 }
 
-@media (max-width: 900px) {
-  .navBar {
-    flex-direction: column;
-    padding: 20px;
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: block;
+  }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  .navBar img {
+    width: 10px;
   }
 
-  .navBar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px 25px;
+  .navLinks {
+    display: none;
   }
 }

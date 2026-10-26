@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>DevConnect | Iniciar sesión</title>
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="../docs/tie-up/logo-tie-up-transparente.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -90,6 +93,8 @@
                   id="login-password"
                   name="password"
                   placeholder="********"
+                  minlength="8"
+                  maxlength="12"
                   required
                 />
 
@@ -186,6 +191,8 @@
                   id="register-password"
                   name="password"
                   placeholder="********"
+                  minlength="8"
+                  maxlength="12"
                   required
                 />
 
@@ -195,7 +202,7 @@
               <small>
                 <i class="fa-regular fa-circle-check"></i>
 
-                Mínimo 8 caracteres
+                Entre 8 y 12 caracteres
               </small>
             </div>
 
@@ -231,6 +238,7 @@
       </p>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/i18n.js"></script>
   </body>
 </html>

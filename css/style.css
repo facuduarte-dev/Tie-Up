@@ -32,75 +32,45 @@ body {
 }
 
 /* ===========================
-   NAVBAR
-=========================== */
-
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background-color: var(--blanco);
-}
-
-.navBar img {
-  width: 200px;
-}
-
-.navBar ul {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
-.navBar a {
-  text-decoration: none;
-  color: var(--verdeOscuro);
-  transition: 0.3s;
-}
-
-.navBar a:hover {
-  color: var(--verdeClaro);
-}
-
-/* ===========================
    HERO
 =========================== */
 
 .hero {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 60px;
+  margin: 60px;
+  margin-top: 30px;
 }
 
 .heroTxt {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: black;
 }
 
 .hero h1 {
   width: 450px;
   font-size: 3rem;
+  color: var(--verdeOscuro);
 }
 
 .hero p {
   width: 350px;
-  line-height: 1.6;
+  color: black;
 }
 
 .heroImg {
   width: 350px;
 }
 
-.divHero {
+.divHeroNav {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.divHero input {
+.divHeroNav input {
   width: 350px;
   padding: 12px;
   border: none;
@@ -139,6 +109,7 @@ body {
   margin: 60px 0;
   font-size: 2rem;
 }
+
 /* ===========================
    CATEGORÍAS
 =========================== */
@@ -157,7 +128,6 @@ body {
 
   background-color: var(--blanco);
   border-radius: 20px;
-  padding: 30px;
 
   display: flex;
   flex-direction: column;
@@ -169,16 +139,11 @@ body {
 
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .card:hover {
   transform: translateY(-6px);
-}
-
-.card i {
-  font-size: 45px;
-  color: var(--verdeClaro);
 }
 
 .card h2 {
@@ -186,6 +151,7 @@ body {
 }
 
 .card p {
+  color: black;
   line-height: 1.5;
 }
 
@@ -193,21 +159,18 @@ body {
    DESTACADOS
 =========================== */
 
-.destacados {
-  padding: 60px 0;
-}
-
 .cardDestacadosContainer {
   display: grid;
   grid-template-columns: repeat(3, auto);
+
   justify-content: space-evenly;
 }
 
 .cardDestacado {
+  background-color: var(--blanco);
   width: 400px;
   height: 380px;
 
-  background-color: var(--blanco);
   color: black;
 
   padding: 20px;
@@ -216,10 +179,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-  transition: 0.3s;
 }
 
 .cardDestacado:hover {
@@ -231,7 +190,7 @@ body {
   height: 170px;
 
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 15x;
 }
 
 .cardDestacado h2 {
@@ -250,74 +209,91 @@ body {
   padding: 12px;
 
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.67s;
 }
 
-.cardDestacado button:hover {
-  background-color: var(--verdeMedio);
+.cardDestacado a {
+  background-color: var(--verdeOscuro);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+  border-radius: 10px;
+
+  color: white;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.67s;
+}
+
+.cardDestacado a:hover {
+  background-color: var(--verdeClaro);
 }
 
 /* ===========================
    COMO FUNCIONA
 =========================== */
-
-.comoFunciona {
-  padding: 60px 0;
-}
-
-.cardComoFuncionaContainer {
+.ComoFuncionaContainer {
   display: grid;
   grid-template-columns: repeat(4, auto);
+
   justify-content: space-evenly;
+
+  align-items: center;
 }
 
-.cardComoFunciona {
+.ComoFunciona {
   width: 280px;
   height: 280px;
 
   background-color: var(--blanco);
   color: black;
 
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 15px;
+
   padding: 30px;
   border-radius: 20px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-
-  text-align: center;
-
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-  transition: 0.3s;
+  transition: 0.67s;
 }
 
-.cardComoFunciona:hover {
+.ComoFunciona:hover {
   transform: translateY(-6px);
 }
 
-.cardComoFunciona img {
+.ComoFunciona img {
   width: 90px;
   height: 90px;
   object-fit: contain;
 }
 
-.cardComoFunciona > i {
+.ComoFunciona > i {
   width: 90px;
   height: 90px;
   display: grid;
   place-items: center;
   color: var(--verdeClaro);
-  font-size: 64px;
+  font-size: 60px;
 }
 
-.cardComoFunciona h2 {
+.ComoFunciona h2 {
   margin: 0;
+  color: var(--verdeOscuro);
 }
 
-.cardComoFunciona p {
+.ComoFunciona p {
   line-height: 1.5;
 }
 
@@ -328,12 +304,10 @@ body {
 .reseñas {
   padding: 70px 40px;
 }
-
 .reseñasCardContainer {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: space-evenly;
-  gap: 40px;
 }
 
 .cardReseña {
@@ -347,16 +321,17 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
-  transition: 0.3s;
+  color: black;
 }
 
 .cardReseña:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: rgba(0, 0, 0, 0.08);
 }
 
 .cardReseña p {
@@ -372,41 +347,41 @@ body {
   color: var(--verdeOscuro);
 }
 
+footer img {
+  width: 200px;
+  height: auto;
+}
+
 footer {
-  background-color: #306e68;
-  color: #ffffff;
+  background-color: var(--verdeOscuro);
+  color: var(--blanco);
+
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: start;
+
   padding: 40px 60px;
-  gap: 30px;
 }
 
 footer div {
   width: 220px;
 }
 
-footer img {
-  width: 200px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
 footer p {
-  color: #f3eddf;
+  color: var(--blanco);
   font-size: 15px;
   line-height: 1.5;
 }
 
 footer h3 {
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 18px;
   margin-bottom: 15px;
 }
 
 footer ul {
   list-style: none;
-  padding: 0;
+  padding: 0px;
 }
 
 footer li {
@@ -415,11 +390,45 @@ footer li {
 
 footer a,
 .footerText {
-  color: #f3eddf;
+  color: var(--blaco);
   text-decoration: none;
   font-size: 15px;
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: var(--blanco);
+}
+
+/* PC: estilos normales, sin @media */
+.cardContainer {
+  grid-template-columns: repeat(4, auto);
+}
+
+/* Laptop */
+@media (max-width: 1439px) {
+  .cardContainer {
+    background-color: aqua;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .cardContainer {
+    background-color: green;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  .cardContainer {
+    display: grid;
+
+    grid-template-columns: 2fr;
+  }
+
+  .card {
+    background-color: blue;
+  }
 }

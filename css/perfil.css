@@ -108,3 +108,38 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.porfile > div {
+  width: min(100%, 460px);
+}
+
+.porfile form {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+.porfile input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c8d8d6;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .title {
+    margin: 32px 20px 36px;
+    text-align: center;
+  }
+
+  .porfile {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px 40px;
+  }
+
+  .porfile img {
+    margin-bottom: 16px;
+  }
+}
