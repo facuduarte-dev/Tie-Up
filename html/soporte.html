@@ -39,6 +39,7 @@
         <div class="navSession">
           <a href="login.html">Registrarse / Iniciar Sesión</a>
         </div>
+        <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </nav>
     </header>
 
@@ -55,7 +56,7 @@
         Nuestro equipo está listo para ayudarte.
       </p>
 
-      <form class="formulario">
+      <form class="formulario" id="support-form">
         <div class="grupo">
           <div class="icono">
             <i class="fa-regular fa-envelope"></i>
@@ -101,7 +102,7 @@
         </div>
       </form>
 
-      <button class="btn">
+      <button class="btn" type="submit" form="support-form">
         <i class="fa-regular fa-paper-plane"></i>
         Enviar un mensaje
       </button>
@@ -112,5 +113,6 @@
       </p>
     </section>
   </body>
+  <script src="../js/navbar.js"></script>
   <script src="../js/i18n.js"></script>
 </html>

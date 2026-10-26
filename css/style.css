@@ -37,9 +37,11 @@ body {
 
 .hero {
   display: flex;
-  justify-content: space-around;
-  margin: 60px;
-  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: min(1180px, calc(100% - 80px));
+  margin: 30px auto 60px;
 }
 
 .heroTxt {
@@ -116,14 +118,15 @@ body {
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-evenly;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 40px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
   padding: 0 40px;
 }
 
 .card {
-  width: 260px;
+  width: 100%;
   height: 220px;
 
   background-color: var(--blanco);
@@ -161,14 +164,16 @@ body {
 
 .cardDestacadosContainer {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-
-  justify-content: space-evenly;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .cardDestacado {
   background-color: var(--blanco);
-  width: 400px;
+  width: 100%;
   height: 380px;
 
   color: black;
@@ -190,7 +195,7 @@ body {
   height: 170px;
 
   object-fit: cover;
-  border-radius: 15x;
+  border-radius: 15px;
 }
 
 .cardDestacado h2 {
@@ -238,15 +243,16 @@ body {
 =========================== */
 .ComoFuncionaContainer {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-
-  justify-content: space-evenly;
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 40px;
   align-items: center;
 }
 
 .ComoFunciona {
-  width: 280px;
+  width: 100%;
   height: 280px;
 
   background-color: var(--blanco);
@@ -306,12 +312,14 @@ body {
 }
 .reseñasCardContainer {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-evenly;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
 }
 
 .cardReseña {
-  width: 340px;
+  width: 100%;
   height: 220px;
 
   background-color: var(--blanco);
@@ -390,7 +398,7 @@ footer li {
 
 footer a,
 .footerText {
-  color: var(--blaco);
+  color: var(--blanco);
   text-decoration: none;
   font-size: 15px;
 }
@@ -399,36 +407,229 @@ footer a:hover {
   color: var(--blanco);
 }
 
-/* PC: estilos normales, sin @media */
-.cardContainer {
-  grid-template-columns: repeat(4, auto);
-}
+/* ==================================
+   LAPTOPS
+   ================================== */
 
-/* Laptop */
 @media (max-width: 1439px) {
   .cardContainer {
-    background-color: aqua;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: initial;
+    gap: 30px;
+  }
+
+  .cardDestacadosContainer,
+  .reseñasCardContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+  }
+
+  .ComoFuncionaContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+  }
+
+  .card,
+  .cardDestacado,
+  .ComoFunciona,
+  .cardReseña {
+    width: 100%;
   }
 }
 
-/* Tablet */
-@media (max-width: 1023px) {
+/* ==================================
+   TABLETS
+   ================================== */
+
+@media (max-width: 1100px) {
+  .hero {
+    align-items: center;
+    gap: 40px;
+    margin: 40px 30px;
+  }
+
+  .hero h1,
+  .hero p,
+  .divHeroNav input {
+    width: 100%;
+  }
+
+  .heroTxt {
+    flex: 1;
+  }
+
+  .heroImg {
+    width: 300px;
+    max-width: 45%;
+  }
+
   .cardContainer {
-    background-color: green;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: initial;
+    gap: 24px;
+    padding: 0 30px;
+  }
+
+  .cardDestacadosContainer,
+  .ComoFuncionaContainer,
+  .reseñasCardContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: initial;
+    gap: 24px;
+    padding: 0 30px;
+  }
+
+  .card,
+  .cardDestacado,
+  .ComoFunciona,
+  .cardReseña {
+    width: 100%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    gap: 35px;
   }
 }
 
-/* Móvil */
+/* ==================================
+   CELULARES
+   ================================== */
+
 @media (max-width: 767px) {
-  .cardContainer {
-    display: grid;
+  .hero {
+    flex-direction: column;
+    margin: 30px 20px;
+    text-align: center;
+  }
 
-    grid-template-columns: 2fr;
+  .heroTxt {
+    width: 100%;
+  }
+
+  .hero h1 {
+    width: 100%;
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .heroImg {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .divHeroNav {
+    width: 100%;
+  }
+
+  .divHeroNav input {
+    width: 100%;
+  }
+
+  .divHeroNav div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #aHero1 {
+    margin-right: 0;
+  }
+
+  #titleCatPopulares,
+  #titleDestacados,
+  #titleComoFunciona,
+  #titleResenas {
+    margin: 45px 20px 30px;
+    font-size: 1.7rem;
+  }
+
+  .cardContainer,
+  .cardDestacadosContainer,
+  .ComoFuncionaContainer,
+  .reseñasCardContainer {
+    grid-template-columns: 1fr;
+    justify-content: initial;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .card,
+  .cardDestacado,
+  .ComoFunciona,
+  .cardReseña {
+    width: 100%;
   }
 
   .card {
-    background-color: blue;
+    height: auto;
+    min-height: 220px;
+    padding: 25px;
+  }
+
+  .cardDestacado {
+    height: auto;
+    min-height: 380px;
+  }
+
+  .ComoFunciona {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .cardReseña {
+    height: auto;
+    min-height: 220px;
+  }
+
+  .reseñas {
+    padding: 40px 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px 24px;
+  }
+
+  footer div {
+    width: 100%;
+  }
+}
+
+/* ==================================
+   CELULARES PEQUEÑOS
+   ================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    margin: 25px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .cardContainer,
+  .cardDestacadosContainer,
+  .ComoFuncionaContainer,
+  .reseñasCardContainer {
+    padding: 0 16px;
+  }
+
+  .card,
+  .cardDestacado,
+  .ComoFunciona,
+  .cardReseña {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
   }
 }

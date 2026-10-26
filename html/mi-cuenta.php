@@ -44,6 +44,7 @@ if (!isset($_SESSION["user_id"])) {
       <div class="navSession">
         <a href="../php/logout.php">Cerrar sesión</a>
       </div>
+      <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </nav>
   </header>
 
@@ -114,5 +115,6 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
+  <script src="../js/navbar.js"></script>
   <script src="../js/i18n.js"></script>
 </html>
