@@ -323,82 +323,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-.separador {
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  margin: 35px 0 25px;
-}
-
-.separador::before,
-.separador::after {
-  content: "";
-
-  flex: 1;
-
-  height: 1px;
-
-  background: #dddddd;
-}
-
-.separador span {
-  color: #777;
-
-  font-size: 0.9rem;
-
-  white-space: nowrap;
-}
-
-.social {
-  display: flex;
-
-  gap: 15px;
-}
-
-.social button {
-  flex: 1;
-
-  color: #111;
-
-  border: 1px solid #d8d8d8;
-
-  border-radius: 10px;
-
-  height: 48px;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 10px;
-
-  background: var(--blanco);
-
-  font-weight: 600;
-  cursor: not-allowed;
-  opacity: 0.65;
-  margin-top: 0;
-}
-
-.social button:hover {
-  background: var(--blanco);
-  transform: none;
-  box-shadow: none;
-}
-
-.social .fa-google {
-  color: #db4437;
-}
-
-.social .fa-github {
-  color: #111;
-}
-
 .feedback.error {
   color: red;
 }
@@ -439,13 +363,9 @@ button:hover {
     padding: 34px 20px;
   }
 
-  .extras,
-  .social {
+  .extras {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .extras {
     gap: 14px;
   }
 }
