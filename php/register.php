@@ -41,7 +41,7 @@ if (!preg_match("/[0-9]/", $password)) {
     redirectToRegister("La contraseña debe contener al menos un número");
 }
 
-if (!preg_match('/[!@#$%^&*]/', $password)) {
+if (!preg_match('/[^a-zA-Z0-9]/', $password)) {
     redirectToRegister("La contraseña debe contener al menos un carácter especial");
 }
 
