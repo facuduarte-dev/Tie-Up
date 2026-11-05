@@ -116,5 +116,5 @@ if (!isset($_SESSION["user_id"])) {
 
 
   <script src="../js/navbar.js?v=20261026-2"></script>
-  <script src="../js/i18n.js?v=20261026-2"></script>
+  <script src="../js/i18n.js?v=20261104-1"></script>
 </html>
