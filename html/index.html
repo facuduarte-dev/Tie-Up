@@ -31,19 +31,24 @@
 
         <div class="navLinks">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#freelancers">Freelancers</a></li>
-            <li><a href="#resenas">Reseñas</a></li>
-            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="index.html"><span data-i18n="inicio">Inicio</span></a></li>
+            <li><a href="#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+            <li><a href="#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+            <li><a href="#resenas"><span data-i18n="resenas">Reseñas</span></a></li>
+            <li><a href="soporte.html"><span data-i18n="soporte">Soporte</span></a></li>
           </ul>
         </div>
 
         <div class="navSession">
-          <a href="login.html">Registrarse / Iniciar Sesión</a>
+          <a href="login.html"><span data-i18n="registrarse-iniciar-sesion">Registrarse / Iniciar Sesión</span></a>
         </div>
 
-        <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <button
+          class="menu-hamburguesa"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
           ☰
         </button>
       </nav>
@@ -54,26 +59,25 @@
       <section class="hero">
         <div class="heroTxt">
           <h1>
-            Encuentra al profesional perfecto para cualquier proyecto digital.
+            <span data-i18n="encuentra-al-profesional-perfecto-para-cualquier-proyecto-digita">Encuentra al profesional perfecto para cualquier proyecto digital.</span>
           </h1>
 
           <p>
-            Diseñadores, programadores, editores, marketers y creadores de
-            contenido en un solo lugar.
+            <span data-i18n="disenadores-programadores-editores-marketers-y-creadores-de-cont">Diseñadores, programadores, editores, marketers y creadores de contenido en un solo lugar.</span>
           </p>
 
           <div class="divHeroNav">
-            <label for="buscarServicio" class="sr-only">Buscar servicio</label>
+            <label for="buscarServicio" class="sr-only"><span data-i18n="buscar-servicio">Buscar servicio</span></label>
 
             <input
               id="buscarServicio"
               type="text"
-              placeholder="¿Qué servicio estás buscando?"
+              placeholder="¿Qué servicio estás buscando?" data-i18n="placeholder:que-servicio-estas-buscando"
             />
 
             <div>
-              <a href="#servicios" id="aHero1">Explorar Servicios</a>
-              <a href="login.html" id="aHero2">Publicar Servicios</a>
+              <a href="#servicios" id="aHero1"><span data-i18n="explorar-servicios">Explorar Servicios</span></a>
+              <a href="login.html" id="aHero2"><span data-i18n="publicar-servicios">Publicar Servicios</span></a>
             </div>
           </div>
         </div>
@@ -89,50 +93,50 @@
 
       <!-- CATEGORÍAS -->
       <section id="servicios">
-        <h2 id="titleCatPopulares">Categorías Populares</h2>
+        <h2 id="titleCatPopulares"><span data-i18n="categorias-populares">Categorías Populares</span></h2>
 
         <div class="cardContainer">
           <div class="card">
             <i class="fa-solid fa-bullhorn"></i>
-            <h2>Marketing</h2>
-            <p>SEO, Ads y Social Media</p>
+            <h2><span data-i18n="marketing">Marketing</span></h2>
+            <p><span data-i18n="seo-ads-y-social-media">SEO, Ads y Social Media</span></p>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-code"></i>
-            <h2>Desarrollo Web</h2>
-            <p>Frontend, Backend y Full Stack</p>
+            <h2><span data-i18n="desarrollo-web">Desarrollo Web</span></h2>
+            <p><span data-i18n="frontend-backend-y-full-stack">Frontend, Backend y Full Stack</span></p>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-palette"></i>
-            <h2>Diseño</h2>
-            <p>Logos, Branding y UI/UX.</p>
+            <h2><span data-i18n="diseno">Diseño</span></h2>
+            <p><span data-i18n="logos-branding-y-ui-ux">Logos, Branding y UI/UX.</span></p>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-video"></i>
-            <h2>Edición</h2>
-            <p>Videos de YouTube y Redes</p>
+            <h2><span data-i18n="edicion">Edición</span></h2>
+            <p><span data-i18n="videos-de-youtube-y-redes">Videos de YouTube y Redes</span></p>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-pen-nib"></i>
-            <h2>Redacción</h2>
-            <p>Copywriting y Blogs</p>
+            <h2><span data-i18n="redaccion">Redacción</span></h2>
+            <p><span data-i18n="copywriting-y-blogs">Copywriting y Blogs</span></p>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-robot"></i>
-            <h2>IA</h2>
-            <p>Automatizaciones y Chatbots</p>
+            <h2><span data-i18n="ia">IA</span></h2>
+            <p><span data-i18n="automatizaciones-y-chatbots">Automatizaciones y Chatbots</span></p>
           </div>
         </div>
       </section>
 
       <!-- DESTACADOS -->
       <section id="freelancers">
-        <h2 id="titleDestacados">Freelancers Destacados</h2>
+        <h2 id="titleDestacados"><span data-i18n="freelancers-destacados">Freelancers Destacados</span></h2>
 
         <div class="cardDestacadosContainer">
           <div class="cardDestacado">
@@ -140,11 +144,11 @@
               src="https://images.pexels.com/photos/1604024/pexels-photo-1604024.jpeg"
               alt="Foto de perfil"
             />
-            <h2>Ana García</h2>
-            <p>Diseñadora web</p>
+            <h2><span data-i18n="ana-garcia">Ana García</span></h2>
+            <p><span data-i18n="disenadora-web">Diseñadora web</span></p>
             <p>⭐⭐⭐⭐⭐ 4.9</p>
-            <!--<button>Ver Perfil</button>-->
-            <a href="perfil-ana.html">Ver Perfil</a>
+            <!--<button><span data-i18n="ver-perfil">Ver Perfil</span></button>-->
+            <a href="perfil-ana.html"><span data-i18n="ver-perfil">Ver Perfil</span></a>
           </div>
 
           <div class="cardDestacado">
@@ -152,10 +156,10 @@
               src="https://images.pexels.com/photos/16323580/pexels-photo-16323580.jpeg"
               alt="Foto de perfil"
             />
-            <h2>Pedro Sanchez</h2>
-            <p>Full Stack Developer</p>
+            <h2><span data-i18n="pedro-sanchez">Pedro Sanchez</span></h2>
+            <p><span data-i18n="full-stack-developer">Full Stack Developer</span></p>
             <p>⭐⭐⭐⭐⭐ 4.9</p>
-            <a href="perfil-ana.html">Ver Perfil</a>
+            <a href="perfil-ana.html"><span data-i18n="ver-perfil">Ver Perfil</span></a>
           </div>
 
           <div class="cardDestacado">
@@ -163,66 +167,66 @@
               src="https://images.pexels.com/photos/9034719/pexels-photo-9034719.jpeg"
               alt="Foto de perfil"
             />
-            <h2>Alonso Mazza</h2>
-            <p>Marketing CN</p>
+            <h2><span data-i18n="alonso-mazza">Alonso Mazza</span></h2>
+            <p><span data-i18n="marketing-cn">Marketing CN</span></p>
             <p>⭐⭐⭐⭐⭐ 4.9</p>
-            <a href="perfil-ana.html">Ver Perfil</a>
+            <a href="perfil-ana.html"><span data-i18n="ver-perfil">Ver Perfil</span></a>
           </div>
         </div>
       </section>
 
       <!-- CÓMO FUNCIONA -->
       <section>
-        <h2 id="titleComoFunciona">¿Cómo funciona?</h2>
+        <h2 id="titleComoFunciona"><span data-i18n="como-funciona">¿Cómo funciona?</span></h2>
 
         <div class="ComoFuncionaContainer">
           <div class="ComoFunciona">
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <h2>Buscar</h2>
-            <p>Encuentra tu servicio ideal.</p>
+            <h2><span data-i18n="buscar">Buscar</span></h2>
+            <p><span data-i18n="encuentra-tu-servicio-ideal">Encuentra tu servicio ideal.</span></p>
           </div>
 
           <div class="ComoFunciona">
             <i class="fa-solid fa-code-compare" aria-hidden="true"></i>
-            <h2>Comparar</h2>
-            <p>Revisa perfiles, experiencia y valoraciones.</p>
+            <h2><span data-i18n="comparar">Comparar</span></h2>
+            <p><span data-i18n="revisa-perfiles-experiencia-y-valoraciones">Revisa perfiles, experiencia y valoraciones.</span></p>
           </div>
 
           <div class="ComoFunciona">
             <i class="fa-regular fa-comments" aria-hidden="true"></i>
-            <h2>Contactar</h2>
-            <p>Habla directamente con el profesional.</p>
+            <h2><span data-i18n="contactar">Contactar</span></h2>
+            <p><span data-i18n="habla-directamente-con-el-profesional">Habla directamente con el profesional.</span></p>
           </div>
 
           <div class="ComoFunciona">
             <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-            <h2>Contratar</h2>
-            <p>Comienza tu proyecto de forma rápida y segura.</p>
+            <h2><span data-i18n="contratar">Contratar</span></h2>
+            <p><span data-i18n="comienza-tu-proyecto-de-forma-rapida-y-segura">Comienza tu proyecto de forma rápida y segura.</span></p>
           </div>
         </div>
       </section>
 
       <!-- RESEÑAS -->
       <section class="reseñas" id="resenas">
-        <h2 id="titleResenas">Lo que dicen nuestros usuarios</h2>
+        <h2 id="titleResenas"><span data-i18n="lo-que-dicen-nuestros-usuarios">Lo que dicen nuestros usuarios</span></h2>
 
         <div class="reseñasCardContainer">
           <div class="cardReseña">
-            <p>"Encontré un diseñador excelente en menos de una hora."</p>
+            <p><span data-i18n="encontre-un-disenador-excelente-en-menos-de-una-hora">"Encontré un diseñador excelente en menos de una hora."</span></p>
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Ana Gómez</p>
+            <p><span data-i18n="ana-gomez">Ana Gómez</span></p>
           </div>
 
           <div class="cardReseña">
-            <p>"Excelente plataforma para encontrar desarrolladores."</p>
+            <p><span data-i18n="excelente-plataforma-para-encontrar-desarrolladores">"Excelente plataforma para encontrar desarrolladores."</span></p>
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Carlos Fernández</p>
+            <p><span data-i18n="carlos-fernandez">Carlos Fernández</span></p>
           </div>
 
           <div class="cardReseña">
-            <p>"Muy fácil de usar y con profesionales de calidad."</p>
+            <p><span data-i18n="muy-facil-de-usar-y-con-profesionales-de-calidad">"Muy fácil de usar y con profesionales de calidad."</span></p>
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Lucía Rodríguez</p>
+            <p><span data-i18n="lucia-rodriguez">Lucía Rodríguez</span></p>
           </div>
         </div>
       </section>
@@ -235,33 +239,33 @@
           src="../src/img/logo-tie-up-transparente.png"
           alt="Logo de Tie-Up"
         />
-        <p>Conectando talento con oportunidades.</p>
+        <p><span data-i18n="conectando-talento-con-oportunidades">Conectando talento con oportunidades.</span></p>
       </div>
 
       <div>
-        <h3>Explorar</h3>
+        <h3><span data-i18n="explorar">Explorar</span></h3>
 
         <ul>
-          <li><span class="footerText">Sobre nosotros</span></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#freelancers">Freelancers</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><span class="footerText"><span data-i18n="sobre-nosotros">Sobre nosotros</span></span></li>
+          <li><a href="#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+          <li><a href="#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+          <li><a href="#contacto"><span data-i18n="contacto">Contacto</span></a></li>
         </ul>
       </div>
 
       <div>
-        <h3>Recursos</h3>
+        <h3><span data-i18n="recursos">Recursos</span></h3>
 
         <ul>
-          <li><a href="soporte.html">Ayuda</a></li>
-          <li><span class="footerText">Preguntas frecuentes</span></li>
-          <li><span class="footerText">Política de privacidad</span></li>
-          <li><span class="footerText">Términos y condiciones</span></li>
+          <li><a href="soporte.html"><span data-i18n="ayuda">Ayuda</span></a></li>
+          <li><span class="footerText"><span data-i18n="preguntas-frecuentes">Preguntas frecuentes</span></span></li>
+          <li><span class="footerText"><span data-i18n="politica-de-privacidad">Política de privacidad</span></span></li>
+          <li><span class="footerText"><span data-i18n="terminos-y-condiciones">Términos y condiciones</span></span></li>
         </ul>
       </div>
 
       <div>
-        <h3>Contacto Directo</h3>
+        <h3><span data-i18n="contacto-directo">Contacto Directo</span></h3>
 
         <p>tieupinfo@gmail.com</p>
         <p>+598 12 345 678</p>

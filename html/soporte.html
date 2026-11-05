@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | Tie-Up</title>
+    <title data-i18n="contacto-tie-up">Contacto | Tie-Up</title>
     <link rel="icon" type="image/png" href="../src/img/logo-tie-up-transparente.png" />
 
     <link
@@ -28,16 +28,16 @@
 
         <div class="navLinks">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="index.html#freelancers">Freelancers</a></li>
-            <li><a href="index.html#resenas">Reseñas</a></li>
-            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="index.html"><span data-i18n="inicio">Inicio</span></a></li>
+            <li><a href="index.html#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+            <li><a href="index.html#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+            <li><a href="index.html#resenas"><span data-i18n="resenas">Reseñas</span></a></li>
+            <li><a href="soporte.html"><span data-i18n="soporte">Soporte</span></a></li>
           </ul>
         </div>
 
         <div class="navSession">
-          <a href="login.html">Registrarse / Iniciar Sesión</a>
+          <a href="login.html"><span data-i18n="registrarse-iniciar-sesion">Registrarse / Iniciar Sesión</span></a>
         </div>
         <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </nav>
@@ -46,14 +46,14 @@
     <section class="contacto">
       <span class="etiqueta">
         <i class="fa-solid fa-headset"></i>
-        ESTAMOS PARA AYUDARTE
+        <span data-i18n="estamos-para-ayudarte">ESTAMOS PARA AYUDARTE</span>
       </span>
 
-      <h1>Contacta con soporte</h1>
+      <h1><span data-i18n="contacta-con-soporte">Contacta con soporte</span></h1>
 
       <p class="descripcion">
-        ¿Tienes dudas, problemas o sugerencias?<br />
-        Nuestro equipo está listo para ayudarte.
+        <span data-i18n="tienes-dudas-problemas-o-sugerencias">¿Tienes dudas, problemas o sugerencias?</span><br />
+        <span data-i18n="nuestro-equipo-esta-listo-para-ayudarte">Nuestro equipo está listo para ayudarte.</span>
       </p>
 
       <form class="formulario" id="support-form">
@@ -63,9 +63,9 @@
           </div>
 
           <div class="contenido">
-            <label for="support-topic">¿En qué te podemos ayudar?</label>
+            <label for="support-topic"><span data-i18n="en-que-te-podemos-ayudar">¿En qué te podemos ayudar?</span></label>
 
-            <small>Cuéntanos en qué podemos ayudarte.</small>
+            <small><span data-i18n="cuentanos-en-que-podemos-ayudarte">Cuéntanos en qué podemos ayudarte.</span></small>
 
             <input id="support-topic" name="topic" type="text" />
           </div>
@@ -77,13 +77,13 @@
           </div>
 
           <div class="contenido">
-            <label for="support-message">Describe tu consulta</label>
+            <label for="support-message"><span data-i18n="describe-tu-consulta">Describe tu consulta</span></label>
 
             <small
-              >Cuéntanos más detalles sobre tu consulta o tu problema.</small
+              ><span data-i18n="cuentanos-mas-detalles-sobre-tu-consulta-o-tu-problema">Cuéntanos más detalles sobre tu consulta o tu problema.</span></small
             >
 
-            <textarea id="support-message" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <textarea id="support-message" name="message" placeholder="Escribe tu mensaje aquí..." data-i18n="placeholder:escribe-tu-mensaje-aqui"></textarea>
           </div>
         </div>
 
@@ -93,23 +93,23 @@
           </div>
 
           <div class="contenido">
-            <label for="support-email">Correo electrónico</label>
+            <label for="support-email"><span data-i18n="correo-electronico">Correo electrónico</span></label>
 
-            <small>Te responderemos a este correo.</small>
+            <small><span data-i18n="te-responderemos-a-este-correo">Te responderemos a este correo.</span></small>
 
-            <input id="support-email" name="email" type="email" placeholder="ejemplo@correo.com" />
+            <input id="support-email" name="email" type="email" placeholder="ejemplo@correo.com" data-i18n="placeholder:ejemplo-correo-com" />
           </div>
         </div>
       </form>
 
       <button class="btn" type="submit" form="support-form">
         <i class="fa-regular fa-paper-plane"></i>
-        Enviar un mensaje
+        <span data-i18n="enviar-un-mensaje">Enviar un mensaje</span>
       </button>
 
       <p class="seguridad">
         <i class="fa-regular fa-circle-check"></i>
-        Tu información está segura con nosotros
+        <span data-i18n="tu-informacion-esta-segura-con-nosotros-2">Tu información está segura con nosotros</span>
       </p>
     </section>
   </body>

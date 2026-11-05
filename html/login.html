@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tie-Up | Iniciar sesión</title>
+    <title data-i18n="tie-up-iniciar-sesion">Tie-Up | Iniciar sesión</title>
     <link
       rel="icon"
       type="image/png"
@@ -29,27 +29,29 @@
 
         <div class="navLinks">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="index.html#freelancers">Freelancers</a></li>
-            <li><a href="index.html#resenas">Reseñas</a></li>
-            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="index.html"><span data-i18n="inicio">Inicio</span></a></li>
+            <li><a href="index.html#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+            <li><a href="index.html#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+            <li><a href="index.html#resenas"><span data-i18n="resenas">Reseñas</span></a></li>
+            <li><a href="soporte.html"><span data-i18n="soporte">Soporte</span></a></li>
           </ul>
         </div>
 
         <div class="navSession">
-          <a href="login.html">Registrarse / Iniciar Sesión</a>
+          <a href="login.html"><span data-i18n="registrarse-iniciar-sesion">Registrarse / Iniciar Sesión</span></a>
         </div>
         <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </nav>
     </header>
 
-    <main class="login">
-      <section class="titulo">
-        <h1>Bienvenido a Dev<span>Connect</span></h1>
+          <section class="titulo">
+        <h1><span data-i18n="bienvenido-a">Bienvenido a</span> <img src="../src/img/logo-tie-up-transparente.png" alt=""></h1>
 
-        <p>Inicia sesión o crea tu cuenta para comenzar</p>
+        <p><span data-i18n="inicia-sesion-o-crea-tu-cuenta-para-comenzar">Inicia sesión o crea tu cuenta para comenzar</span></p>
       </section>
+
+    <main class="login">
+
 
       <section class="contenedor-login">
         <div class="card login-card">
@@ -57,13 +59,13 @@
             <i class="fa-regular fa-user"></i>
           </div>
 
-          <h2>Iniciar sesión</h2>
+          <h2><span data-i18n="iniciar-sesion">Iniciar sesión</span></h2>
 
-          <p>Accede a tu cuenta para continuar</p>
+          <p><span data-i18n="accede-a-tu-cuenta-para-continuar">Accede a tu cuenta para continuar</span></p>
 
           <form action="../php/login.php" method="POST">
             <div class="campo">
-              <label for="login-email">Correo electrónico</label>
+              <label for="login-email"><span data-i18n="correo-electronico">Correo electrónico</span></label>
 
               <div class="input-icon">
                 <i class="fa-regular fa-envelope"></i>
@@ -72,14 +74,14 @@
                   type="email"
                   id="login-email"
                   name="email"
-                  placeholder="tu@email.com"
+                  placeholder="tu@email.com" data-i18n="placeholder:tu-email-com"
                   required
                 />
               </div>
             </div>
 
             <div class="campo">
-              <label for="login-password">Contraseña</label>
+              <label for="login-password"><span data-i18n="contrasena">Contraseña</span></label>
 
               <div class="input-icon">
                 <i class="fa-solid fa-lock"></i>
@@ -104,13 +106,13 @@
               <label>
                 <input type="checkbox" />
 
-                Recordarme
+                <span data-i18n="recordarme">Recordarme</span>
               </label>
 
-              <a href="index.html"> ¿Olvidaste tu contraseña? </a>
+              <a href="index.html"> <span data-i18n="olvidaste-tu-contrasena">¿Olvidaste tu contraseña?</span> </a>
             </div>
 
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit"><span data-i18n="iniciar-sesion">Iniciar sesión</span></button>
           </form>
 
         </div>
@@ -122,13 +124,13 @@
             <i class="fa-solid fa-user-plus"></i>
           </div>
 
-          <h2>Crear cuenta</h2>
+          <h2><span data-i18n="crear-cuenta">Crear cuenta</span></h2>
 
-          <p>Únete a Tie-Up y consigue más oportunidades</p>
+          <p><span data-i18n="unete-a-tie-up-y-consigue-mas-oportunidades">Únete a Tie-Up y consigue más oportunidades</span></p>
 
           <form action="../php/register.php" method="POST">
             <div class="campo">
-              <label for="register-name">Nombre completo</label>
+              <label for="register-name"><span data-i18n="nombre-completo">Nombre completo</span></label>
 
               <div class="input-icon">
                 <i class="fa-regular fa-user"></i>
@@ -137,14 +139,14 @@
                   type="text"
                   id="register-name"
                   name="name"
-                  placeholder="Tu nombre completo"
+                  placeholder="Tu nombre completo" data-i18n="placeholder:tu-nombre-completo"
                   required
                 />
               </div>
             </div>
 
             <div class="campo">
-              <label for="register-email">Correo electrónico</label>
+              <label for="register-email"><span data-i18n="correo-electronico">Correo electrónico</span></label>
 
               <div class="input-icon">
                 <i class="fa-regular fa-envelope"></i>
@@ -153,14 +155,14 @@
                   type="email"
                   id="register-email"
                   name="email"
-                  placeholder="tu@email.com"
+                  placeholder="tu@email.com" data-i18n="placeholder:tu-email-com"
                   required
                 />
               </div>
             </div>
 
             <div class="campo">
-              <label for="register-password">Contraseña</label>
+              <label for="register-password"><span data-i18n="contrasena">Contraseña</span></label>
 
               <div class="input-icon">
                 <i class="fa-solid fa-lock"></i>
@@ -187,7 +189,7 @@
 
             <div id="feedback-register" class="feedback"></div>
 
-            <button type="submit">Registrarse</button>
+            <button type="submit"><span data-i18n="registrarse">Registrarse</span></button>
           </form>
 
         </div>
@@ -196,9 +198,7 @@
       <p class="seguridad">
         <i class="fa-solid fa-shield-halved"></i>
 
-        Tu información está segura con nosotros.
-      </p>
-    </main>
+        <span data-i18n="tu-informacion-esta-segura-con-nosotros">Tu información está segura con nosotros.</span>
 
     <script src="../js/auth.js?v=20261026-2"></script>
     <script src="../js/navbar.js?v=20261026-2"></script>

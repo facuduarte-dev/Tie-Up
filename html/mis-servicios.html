@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Servicios</title>
+    <title data-i18n="mis-servicios">Mis Servicios</title>
     <link rel="icon" type="image/png" href="../src/img/logo-tie-up-transparente.png" />
     <link rel="stylesheet" href="../css/navbar.css?v=20261026-2" />
     <link rel="stylesheet" href="../css/mis-servicios.css?v=20261026-2" />
@@ -20,53 +20,53 @@
 
         <div class="navLinks">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="index.html#freelancers">Freelancers</a></li>
-            <li><a href="index.html#resenas">Reseñas</a></li>
-            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="index.html"><span data-i18n="inicio">Inicio</span></a></li>
+            <li><a href="index.html#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+            <li><a href="index.html#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+            <li><a href="index.html#resenas"><span data-i18n="resenas">Reseñas</span></a></li>
+            <li><a href="soporte.html"><span data-i18n="soporte">Soporte</span></a></li>
           </ul>
         </div>
 
         <div class="navSession">
-          <a href="../php/logout.php">Cerrar sesión</a>
+          <a href="../php/logout.php"><span data-i18n="cerrar-sesion">Cerrar sesión</span></a>
         </div>
         <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </nav>
     </header>
 
-    <h2>Publicar servicios</h2>
-    <p>Comparte tu talento y conecta con nuevos clientes</p>
+    <h2><span data-i18n="publicar-servicios-2">Publicar servicios</span></h2>
+    <p><span data-i18n="comparte-tu-talento-y-conecta-con-nuevos-clientes">Comparte tu talento y conecta con nuevos clientes</span></p>
 
     <form method="POST">
-      <label for="service-title">Título del servicio</label>
-      <input id="service-title" name="title" type="text" placeholder="Ej.: Diseño de sitio web profesional" />
+      <label for="service-title"><span data-i18n="titulo-del-servicio">Título del servicio</span></label>
+      <input id="service-title" name="title" type="text" placeholder="Ej.: Diseño de sitio web profesional" data-i18n="placeholder:ej-diseno-de-sitio-web-profesional" />
 
-      <label for="service-category">Categoría</label>
-      <input id="service-category" name="category" type="text" placeholder="Seleccione una categoría" />
+      <label for="service-category"><span data-i18n="categoria">Categoría</span></label>
+      <input id="service-category" name="category" type="text" placeholder="Seleccione una categoría" data-i18n="placeholder:seleccione-una-categoria" />
 
-      <label for="service-specialty">Especialidad</label>
-      <input id="service-specialty" name="specialty" type="text" placeholder="Ej.: Sitios web" />
+      <label for="service-specialty"><span data-i18n="especialidad">Especialidad</span></label>
+      <input id="service-specialty" name="specialty" type="text" placeholder="Ej.: Sitios web" data-i18n="placeholder:ej-sitios-web" />
 
-      <label for="service-description">Descripción</label>
+      <label for="service-description"><span data-i18n="descripcion">Descripción</span></label>
       <input
         id="service-description"
         name="description"
         type="text"
-        placeholder="Describe qué ofreces y qué incluye el servicio..."
+        placeholder="Describe qué ofreces y qué incluye el servicio..." data-i18n="placeholder:describe-que-ofreces-y-que-incluye-el-servicio"
       />
 
       <div>
-        <label for="service-price">Precio (USD)</label>
-        <input id="service-price" name="price" type="number" min="0" placeholder="Ej.: 150" />
+        <label for="service-price"><span data-i18n="precio-usd">Precio (USD)</span></label>
+        <input id="service-price" name="price" type="number" min="0" placeholder="Ej.: 150" data-i18n="placeholder:ej-150" />
 
-        <label for="delivery-time">Plazo de entrega</label>
-        <input id="delivery-time" name="delivery_time" type="text" placeholder="Ej.: 7 días" />
+        <label for="delivery-time"><span data-i18n="plazo-de-entrega">Plazo de entrega</span></label>
+        <input id="delivery-time" name="delivery_time" type="text" placeholder="Ej.: 7 días" data-i18n="placeholder:ej-7-dias" />
       </div>
 
-      <label for="service-file">Archivo del servicio</label>
+      <label for="service-file"><span data-i18n="archivo-del-servicio">Archivo del servicio</span></label>
       <input id="service-file" name="service_file" type="file" />
-      <button type="submit">Publicar servicio</button>
+      <button type="submit"><span data-i18n="publicar-servicio">Publicar servicio</span></button>
     </form>
   </body>
   <script src="../js/navbar.js?v=20261026-2"></script>

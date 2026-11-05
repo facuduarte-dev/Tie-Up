@@ -8,11 +8,13 @@ require_once "db_connect.php";
 
 
 //Este archivo fue llamado mediante el metodo post
+//only if this doc !fue! called for the post method
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email"] ?? "");
     $password = $_POST["password"] ?? "";
 
     //Si el correo electronico no tiene un formato valido
+    //validate the  mail
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mensaje = "El correo electronico no es valido";
         header("Location: ../html/login.html?error=" . urlencode($mensaje));
@@ -20,15 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     //Si la contraseña esta vacia
+    //if the password is !vacia!
     if ($password === "") {
         $mensaje = "La contraseña es obligatoria";
         header("Location: ../html/login.html?error=" . urlencode($mensaje));
         exit();
     }
 
+
     $sql = "SELECT id_user, name, email, password
             FROM usuarios
             WHERE email = ?";
+
 
 
     $stmt = $conn->prepare($sql);
@@ -42,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $stmt->execute();
 
-    //Guardamos el resultado de la consulta en una variable lalmada "$resultado"
+    //Guardamos el resultado de la consulta en una variable llamada  "$resultado"
     $resultado = $stmt->get_result();
 
     if ($resultado->num_rows !== 1) {

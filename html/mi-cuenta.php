@@ -33,16 +33,16 @@ if (!isset($_SESSION["user_id"])) {
 
       <div class="navLinks">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#freelancers">Freelancers</a></li>
-          <li><a href="index.html#resenas">Reseñas</a></li>
-          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="index.html"><span data-i18n="inicio">Inicio</span></a></li>
+          <li><a href="index.html#servicios"><span data-i18n="servicios">Servicios</span></a></li>
+          <li><a href="index.html#freelancers"><span data-i18n="freelancers">Freelancers</span></a></li>
+          <li><a href="index.html#resenas"><span data-i18n="resenas">Reseñas</span></a></li>
+          <li><a href="soporte.html"><span data-i18n="soporte">Soporte</span></a></li>
         </ul>
       </div>
 
       <div class="navSession">
-        <a href="../php/logout.php">Cerrar sesión</a>
+        <a href="../php/logout.php"><span data-i18n="cerrar-sesion">Cerrar sesión</span></a>
       </div>
       <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </nav>
@@ -50,7 +50,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
   <section class="title">
-    <h2>Mi cuenta</h2>
+    <h2><span data-i18n="mi-cuenta">Mi cuenta</span></h2>
     <p>Analiza tus datos y tu perfil profesional</p>
   </section>
 
@@ -63,8 +63,8 @@ if (!isset($_SESSION["user_id"])) {
       <h2>Información personal</h2>
 
       <ul>
-        <li><a href="mis-servicios.html">Mis Servicios</a></li>
-        <li><a href="contrataciones.html">Mis Contrataciones</a></li>
+        <li><a href="mis-servicios.html"><span data-i18n="mis-servicios">Mis Servicios</span></a></li>
+        <li><a href="contrataciones.html"><span data-i18n="mis-contrataciones">Mis Contrataciones</span></a></li>
         <li><a href="">Seguridad</a></li>
       </ul>
 
@@ -76,7 +76,7 @@ if (!isset($_SESSION["user_id"])) {
     <div>
       <div class="form">
         <form method="POST">
-          <label for="profile-name">Nombre completo</label>
+          <label for="profile-name"><span data-i18n="nombre-completo">Nombre completo</span></label>
           <input
             type="text"
             id="profile-name"
@@ -84,7 +84,7 @@ if (!isset($_SESSION["user_id"])) {
             placeholder="Ingrese su nuevo nombre"
             value="<?php echo htmlspecialchars($_SESSION["user_name"]); ?>" />
 
-          <label for="profile-email">Correo electrónico</label>
+          <label for="profile-email"><span data-i18n="correo-electronico">Correo electrónico</span></label>
           <input type="email"
             id="profile-email"
             name="email"
@@ -94,7 +94,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
-          <label for="profile-specialty">Especialidad</label>
+          <label for="profile-specialty"><span data-i18n="especialidad">Especialidad</span></label>
           <input id="profile-specialty" name="specialty" type="text" placeholder="Diseño web y UX/UI" />
 
           <label for="profile-about">Sobre mí</label>
@@ -106,7 +106,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
       <a href="">Guardar Cambios</a>
-      <a href="../php/logout.php">Cerrar sesión</a>
+      <a href="../php/logout.php"><span data-i18n="cerrar-sesion">Cerrar sesión</span></a>
 
     </div>
 

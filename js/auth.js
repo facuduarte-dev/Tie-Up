@@ -1,11 +1,12 @@
-//when the DOM is reddy
+//when the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  //Exectute this :
+  //Execute this :
 
   //create a °variable° to locate the div with the "feedback" Id
   const feedback = document.getElementById("feedback-login");
   const registerFeedback = document.getElementById("feedback-register");
 
+  //window.location.search devuelve la parte de la URL que comienza con ?.
   const parametros = new URLSearchParams(window.location.search);
 
   if (parametros.has("error")) {

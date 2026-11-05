@@ -1,64 +1,78 @@
 (function () {
-  const pagePath = window.location.pathname;
-  const basePath = pagePath.includes("/html/") ? "../lang/" : "lang/";
-  const storageKey = "tieup-language";
+  const storageKey = "lang";
   const sourceLanguage = "es";
+  let translations = {};
   let currentLanguage = localStorage.getItem(storageKey) || sourceLanguage;
 
-  function translateNode(node, dictionary) {
-    if (node.nodeType === Node.TEXT_NODE) {
-      const original = node.nodeValue;
-      const normalized = original.replace(/\s+/g, " ").trim();
-      if (normalized && dictionary[normalized]) {
-        const leading = original.match(/^\s*/)[0];
-        const trailing = original.match(/\s*$/)[0];
-        node.nodeValue = leading + dictionary[normalized] + trailing;
-      }
-      return;
+  const translationsUrl = new URL(
+    "../lang/translations.json",
+    document.currentScript.src
+  );
+
+  function translateElement(element) {
+    const instruction = element.dataset.i18n;
+    if (!instruction) return;
+
+    const separator = instruction.indexOf(":");
+    const attribute = separator === -1 ? null : instruction.slice(0, separator);
+    const key = separator === -1 ? instruction : instruction.slice(separator + 1);
+    const dictionary = translations[currentLanguage] || {};
+    const translatedText = dictionary[key];
+
+    if (translatedText === undefined) return;
+
+    if (attribute) {
+      element.setAttribute(attribute, translatedText);
+    } else {
+      element.textContent = translatedText;
     }
-    if (node.nodeType !== Node.ELEMENT_NODE || node.matches("script, style, textarea")) return;
-    if (node.placeholder && dictionary[node.placeholder]) node.placeholder = dictionary[node.placeholder];
-    if (node.title && dictionary[node.title]) node.title = dictionary[node.title];
-    if (node.getAttribute("aria-label") && dictionary[node.getAttribute("aria-label")]) {
-      node.setAttribute("aria-label", dictionary[node.getAttribute("aria-label")]);
-    }
-    node.childNodes.forEach((child) => translateNode(child, dictionary));
   }
 
-  async function loadLanguage(language) {
-    const response = await fetch(`${basePath}${language}.json`);
-    if (!response.ok) throw new Error("No se pudo cargar el idioma");
-    const dictionary = await response.json();
-    translateNode(document.body, dictionary);
-    if (dictionary[document.title]) document.title = dictionary[document.title];
-    document.documentElement.lang = language;
-    localStorage.setItem(storageKey, language);
+  function applyTranslations() {
+    document.documentElement.lang = currentLanguage;
+    document.querySelectorAll("[data-i18n]").forEach(translateElement);
+
     const button = document.querySelector("#language-toggle");
-    if (button) button.textContent = language === "es" ? "EN" : "ES";
+    if (button) {
+      button.textContent = currentLanguage === "es" ? "EN" : "ES";
+      button.title = currentLanguage === "es"
+        ? "Cambiar a inglés"
+        : "Switch to Spanish";
+    }
+  }
+
+  function toggleLanguage() {
+    currentLanguage = currentLanguage === "es" ? "en" : "es";
+    localStorage.setItem(storageKey, currentLanguage);
+    applyTranslations();
   }
 
   function addLanguageButton() {
     if (document.querySelector("#language-toggle")) return;
+
     const target = document.querySelector(".navSession") || document.querySelector("nav");
     if (!target) return;
+
     const button = document.createElement("button");
     button.id = "language-toggle";
     button.type = "button";
-    button.title = "Cambio de idioma";
-    button.textContent = currentLanguage === "es" ? "EN" : "ES";
-    button.addEventListener("click", () => {
-      currentLanguage = currentLanguage === "es" ? "en" : "es";
-      localStorage.setItem(storageKey, currentLanguage);
-      window.location.reload();
-    });
+    button.addEventListener("click", toggleLanguage);
     target.appendChild(button);
   }
 
   document.addEventListener("DOMContentLoaded", async () => {
-    addLanguageButton();
-    if (currentLanguage !== sourceLanguage) {
-      try { await loadLanguage(currentLanguage); }
-      catch (error) { localStorage.removeItem(storageKey); }
+    try {
+      const response = await fetch(translationsUrl);
+      if (!response.ok) throw new Error("No se pudo cargar el archivo de idiomas");
+
+      translations = await response.json();
+      if (!translations[currentLanguage]) currentLanguage = sourceLanguage;
+
+      addLanguageButton();
+      applyTranslations();
+    } catch (error) {
+      console.error("No se pudieron cargar las traducciones:", error);
+      localStorage.removeItem(storageKey);
     }
   });
 })();
