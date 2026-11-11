@@ -1,16 +1,13 @@
 <?php
 
 $credentials = parse_ini_file("/var/www/facu_fx/.db_credentials.txt");
-echo "<pre>";
-print_r($credentials);
-echo "</pre>";
-exit;
+
 
 $conn = new mysqli(
     $credentials["Host"],
     $credentials["Usuario"],
     $credentials["Contraseña"],
-    $credentials["bases de datos"]
+    $credentials["basesdedatos"]
 );
 
 // Verificar si la conexión falló
