@@ -3,9 +3,9 @@
 $credentials = parse_ini_file("/var/www/facu_fx/.db_credentials.txt");
 
 $conn = new mysqli(
-    $credentials["Host"],
-    $credentials["Usuario"],
-    $credentials["Contraseña"],
+    $credentials["localhost"],
+    $credentials["facu_fx"],
+    $credentials["5811FacuITSP#"],
     $credentials["BaseDeDatos"]
 );
 
