@@ -192,7 +192,8 @@ body {
   transform: translateY(-6px);
 }
 
-.cardDestacado img {
+.cardDestacado img,
+.cardDestacado video {
   width: 100%;
   height: 170px;
 
